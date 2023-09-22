@@ -14,9 +14,13 @@
   --terciary-color: #324256;
 }
 
-.poppins-h1{
-  font-family: 'Ubuntu', sans-serif;
+.poppins-h1 {
+  font-family: 'Poppins', sans-serif;
   font-size: 30px;
   font-weight: bolder;
   color: #2D3B4D;
+}
+
+.poppins-txt {
+  font-family: 'Poppins', sans-serif;
 }
