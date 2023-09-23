@@ -1,0 +1,133 @@
+
+body {
+    font-family: Poppins, sans-serif;
+  }
+  
+  #header_visualizaCarro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    box-shadow:  5px 5px 10px #dadada;
+  }
+  
+  .logo {
+    margin: 10px;
+    width: 30%;
+  }
+  
+  .headerITENS_visualizaCarro {
+    list-style: none;
+    display: flex;
+  }
+  
+  .headerITENS_visualizaCarro>a {
+    padding-left: 80px;
+  }
+  
+  .carroEspecifics_1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 35px;
+    background-color: rgba(108, 193, 185, 0.60);
+    height: 130px;
+  }
+  
+  .nomeCarro_visualiza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .avaliacoesVisualiza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  } 
+
+  .icons_visualiza {
+    display: flex;
+    gap: 90px;
+  }
+
+.carroEspecifics_2 {
+    display: flex;
+    gap: 8%;
+}
+
+.carroDados_visualiza {
+    list-style: none;
+}
+
+.carroDados_visualiza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.sliderVisualizar {
+    display: flex;
+    width: 50%;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.imagem_VisualizaCarro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.slider {
+    opacity: 0;
+    transition: .2s;
+    position: absolute;
+    width: 100%;
+}
+
+.on {
+    opacity: 1;
+}
+
+#prev_button, #next_button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#prev_button img, #next_button img {
+    width: 100%;
+    height: 100%;
+}
+
+.botaoContinuar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    margin-right: 100px;
+}
+
+.incluidoPreco {
+    margin-bottom: 5px;
+}
+
+.botao_visualiza {
+    background-color: #80ccc3;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 700;
+}
