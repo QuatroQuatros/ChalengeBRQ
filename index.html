@@ -26,10 +26,10 @@
                     <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">Comprar</li>
                     <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">Vender</li>
                     <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">Alugar</li>
-
-                    <div class="mx-4 my-6 md:my-0 login-usuario flex flex-row items-center justify-around">
+ 
+                    <div class="mx-4 my-6 md:my-0 md:ml-48 flex flex-row items-center">
                         <i class="fa-solid fa-user fa-xl"></i>
-                        <p class="texto-login">Entrar</p>                   
+                        <p class="texto-login pl-2">Entrar</p>                   
                     </div>
                 </ul>
                 
@@ -76,19 +76,23 @@
             <h1 class="my-5 poppins-h1 flex justify-center">ALUGUE UM CARRO</h1>
             <article>
                 <section>
-                    <h2 class="txt-black my-4">Categoria dos veículos</h2>
+                    <h1 class="txt-black my-4 ml-6 font-bold">Categoria dos veículos</h1>
                     <div class="w-auto">
-                        <div class="filtros w-auto">
-                            <div class="flex flex-inline justify-between w-3/5">
-                                <img class="w-1/4 p-2" src="/assets/imgs/Group 1.svg" alt="">
-                                <img class="w-1/4 p-2" src="/assets/imgs/Group 2.svg" alt="">
-                                <img class="w-1/4 p-2" src="/assets/imgs/Group 3.svg" alt="">
-                                <img class="w-1/4 p-2" src="/assets/imgs/Group 4.svg" alt="">
+                        <div class="filtros">
+                            <div class="flex flex-inline justify-around">
+                                <img class="p-2 w-[120px] items-center md:w-1/6" src="/assets/imgs/Group 1.svg" alt="">
+                                <img class="p-2 w-[120px] items-center md:w-1/6" src="/assets/imgs/Group 2.svg" alt="">
+                                <img class="p-2 w-[120px] items-center md:w-1/6" src="/assets/imgs/Group 3.svg" alt="">
+                                <img class="p-2 w-[120px] items-center md:w-1/6" src="/assets/imgs/Group 4.svg" alt="">
+                                <img class="p-2 w-[120px] items-center md:w-2/6 mt-36" src="/assets/imgs/Group 4.svg" alt="">
                             </div>
-                            <div>
-                                <div class="w-50 bg-red-500">
-                                    <img src="/assets/imgs/googlemaps-bg.png" alt="Google Maps">
-                                </div>
+                            <div class="inputs flex">
+                                <label for="">Local de Retirada</label>
+                                <input type="text" placeholder="Onde você quer alugar?">
+                                <label for="">Data e Hora de Retirada</label>
+                                <input type="date">
+                                <label for="">Data e Hora de Devolução</label>
+                                <input type="date">
                             </div>
                         </div>
                         <div>
@@ -128,8 +132,13 @@
     <script>
         function ToggleMenu(elemento) {
             let list = document.querySelector('ul');
-            elemento.classList.toggle("fa-x", list.classList.add('top-[80px]'), list.classList.add('opacity-100'));
-
+            if (list.classList.contains('top-[120px]')) {
+                list.classList.remove('top-[120px]')
+                elemento.classList.toggle('fa-x')
+            }else{
+                list.classList.remove('Z-[49]')
+                elemento.classList.toggle("fa-x"), list.classList.add('top-[120px]'), list.classList.add('opacity-100');
+            }
         }   
 
     </script>
