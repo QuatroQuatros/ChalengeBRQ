@@ -30,6 +30,7 @@ function prevSlider() {
     }else {
         currentSLide--
     }
+    showSlider()
 }
 
 btnNext.addEventListener('click', nextSlider)
