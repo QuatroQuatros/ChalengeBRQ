@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyCar</title>
+
+    <!------ LINKS ------>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen">
+    <div class="container mx-auto py-12">
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form id="cadastroForm" class="mb-6" method="get">
+                <!-- Seção 1: Dados Pessoais -->
+                <div class="mb-6" data-step="1">
+                    <h2 class="text-2xl font-semibold">Dados Pessoais</h2>
+                    <div class="mt-4 space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="nome" class="block text-gray-700 font-bold mb-2">Nome</label>
+                                <input id="nome" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nome">
+                            </div>
+                            <div>
+                                <label for="sobrenome" class="block text-gray-700 font-bold mb-2">Sobrenome</label>
+                                <input id="sobrenome" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Sobrenome">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="rg" class="block text-gray-700 font-bold mb-2">RG</label>
+                            <input id="rg" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="RG">
+                        </div>
+                        <div>
+                            <label for="cpf" class="block text-gray-700 font-bold mb-2">CPF</label>
+                            <input id="cpf" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="CPF">
+                        </div>
+                        <div>
+                            <label for="data-nascimento" class="block text-gray-700 font-bold mb-2">Data de Nascimento</label>
+                            <input id="data-nascimento" type="date" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div>
+                            <label for="nacionalidade" class="block text-gray-700 font-bold mb-2">Nacionalidade</label>
+                            <input id="nacionalidade" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nacionalidade">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seção 2: Dados de Login -->
+                <div class="mb-6 hidden" data-step="2">
+                    <h2 class="text-2xl font-semibold">Dados de Login</h2>
+                    <div class="mt-4 space-y-4">
+                        <div>
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                            <input id="email" type="email" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email">
+                        </div>
+                        <div>
+                            <label for="confirm-email" class="block text-gray-700 font-bold mb-2">Confirmação de Email</label>
+                            <input id="confirm-email" type="email" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Confirme o Email">
+                        </div>
+                        <div>
+                            <label for="senha" class="block text-gray-700 font-bold mb-2">Senha</label>
+                            <input id="senha" type="password" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Senha">
+                        </div>
+                        <div>
+                            <label for="confirm-senha" class="block text-gray-700 font-bold mb-2">Confirmação de Senha</label>
+                            <input id="confirm-senha" type="password" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Confirme a Senha">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seção 3: Dados de Endereço -->
+                <div class="mb-6 hidden" data-step="3">
+                    <h2 class="text-2xl font-semibold">Dados de Endereço</h2>
+                    <div class="mt-4 space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="cep" class="block text-gray-700 font-bold mb-2">CEP</label>
+                                <input id="cep" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="CEP">
+                            </div>
+                            <div>
+                                <label for="bairro" class="block text-gray-700 font-bold mb-2">Bairro</label>
+                                <input id="bairro" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Bairro">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="endereco" class="block text-gray-700 font-bold mb-2">Endereço</label>
+                            <input id="endereco" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Endereço">
+                        </div>
+                        <div>
+                            <label for="complemento" class="block text-gray-700 font-bold mb-2">Complemento</label>
+                            <input id="complemento" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Complemento">
+                        </div>
+                        <div>
+                            <label for="numero" class="block text-gray-700 font-bold mb-2">Número</label>
+                            <input id="numero" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Número">
+                        </div>
+                        <div>
+                            <label for="cidade" class="block text-gray-700 font-bold mb-2">Cidade</label>
+                            <input id="cidade" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Cidade">
+                        </div>
+                        <div>
+                            <label for="estado" class="block text-gray-700 font-bold mb-2">Estado</label>
+                            <input id="estado" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Estado">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botões de navegação para os passos -->
+                <div class="flex justify-between">
+                    <button type="button" id="prevStep" class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Anterior</button>
+                    <button type="button" id="nextStep" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Próximo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('cadastroForm');
+        const prevStepButton = document.getElementById('prevStep');
+        const nextStepButton = document.getElementById('nextStep');
+        const formSections = form.querySelectorAll('.mb-6');
+        let currentStep = 1;
+
+        // Função para mostrar o passo atual e ocultar os outros
+        const showStep = (step) => {
+            formSections.forEach(section => {
+                if (section.getAttribute('data-step') === step.toString()) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        };
+
+        // Função para avançar para o próximo passo
+        const nextStep = () => {
+            currentStep++;
+            if (currentStep > formSections.length) {
+                currentStep = formSections.length;
+            }
+            showStep(currentStep);
+        };
+
+        // Função para voltar ao passo anterior
+        const prevStep = () => {
+            currentStep--;
+            if (currentStep < 1) {
+                currentStep = 1;
+            }
+            showStep(currentStep);
+        };
+
+        // Adicionar eventos aos botões de navegação
+        nextStepButton.addEventListener('click', nextStep);
+        prevStepButton.addEventListener('click', prevStep);
+    </script>
+</body>
+</html>
