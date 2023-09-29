@@ -120,24 +120,6 @@
                         <h1 class="txt-black my-2 ml-6 font-bold ">Carros</h1>
                         <div class="w-full my-12">
                             <div class="mx-6 flex flex-row items-center" id="listaCarros-horizontal">
-                                <!-- <div class="bg-[#324256] w-48 h-64 rounded-xl">
-                                    <span class="">
-                                        <img src="/assets/imgs/carro-card.png" class="relative -mt-8 mb-4 rounded-xl" alt="aa">
-                                    </span>
-                                    <div class="desc-carros text-center text-white py-2">
-                                        <p class="py-1 px-2 font-normal">
-                                            Modelo Z2K
-                                        </p>
-                                        <h3 class="font-bold py-1 px-2">
-                                            VEÍCULO NOME
-                                        </h3>
-                                        <p>
-                                            R$ 580,00 /DIA
-                                        </p>
-                                        <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
-                                            Reservar
-                                        </button>
-                                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -201,22 +183,15 @@
             }
         }       
 
-        //lista carros
         function GeraCadsVeiculos(elementoId, caminhoImagem) {   
-            // Obtendo o elemento pai onde os cards serão adicionados
-            const pai = document.getElementById(elementoId); // Substitua com o ID do elemento pai
+            const pai = document.getElementById(elementoId); 
 
-            // Número de cards que você deseja criar
             const numeroDeCards = 6;
-            // Altere conforme necessário
 
-            // Loop para criar os cards
             for (let i = 0; i < numeroDeCards; i++) {
-                // Criando o elemento div para o card
                 const card = document.createElement('div');
                 card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4');
 
-                // Adicionando o conteúdo do card
                 card.innerHTML = `
                     <span class="">
                         <img src="${caminhoImagem}" class="relative -mt-8 mb-4 rounded-xl" alt="aa">
@@ -237,7 +212,6 @@
                     </div>
                 `;
 
-                // Adicionando o card ao elemento pai
                 pai.appendChild(card);
             }
         }
