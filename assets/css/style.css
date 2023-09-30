@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&family=Ubuntu:ital,wght@0,300;0,400;1,500&display=swap");
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&family=Ubuntu:ital,wght@0,300;0,400;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+>>>>>>> 2427f9458ba24df5f3819fb0d026d1e4ac755f1b
 
 * {
   margin: 0;
@@ -12,6 +18,7 @@
   --primary-color: #71ada8;
   --second-color: #d9d9d9;
   --terciary-color: #324256;
+<<<<<<< HEAD
 }
 
 .poppins-h1 {
@@ -24,3 +31,6 @@
 .poppins-txt {
   font-family: "Poppins", sans-serif;
 }
+=======
+}
+>>>>>>> 2427f9458ba24df5f3819fb0d026d1e4ac755f1b
