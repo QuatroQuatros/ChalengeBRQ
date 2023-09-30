@@ -193,12 +193,12 @@
     </body>
 
     <script>
+        $ = document.querySelector.bind(document); 
+        $$ = document.querySelectorAll.bind(document); 
 
-              
+        let largura = 'body';
 
-            
-
-            console.log(largura);
+        largura = $(largura).clientWidth;
 
 
         function ToggleMenu(elemento) {
@@ -217,19 +217,20 @@
         function GeraCadsVeiculos(elementoId, caminhoImagem) {   
         const pai = document.getElementById(elementoId); 
 
-        var numeroDeCards = 8;
         
         if(largura <= 425){
             numeroDeCards = 1;
-
+            
         }else if(largura <= 768){
             numeroDeCards = 3;
         }else if(largura <= 1024){
             numeroDeCards = 4;
+        }else{
+            var numeroDeCards = 5;
         }
-
-            for (let i = 0; i < numeroDeCards; i++) {
-                const card = document.createElement('div');
+        
+        for (let i = 0; i < numeroDeCards; i++) {
+            const card = document.createElement('div');
                 card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4');
 
                 card.innerHTML = `
