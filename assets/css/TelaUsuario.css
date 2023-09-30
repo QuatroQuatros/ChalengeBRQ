@@ -1,16 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Poppins, sans-serif;
   }
-
-.logoTelaUsuario {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    width: 90px;
-    height: 90px;
-}
 
