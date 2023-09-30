@@ -16,20 +16,27 @@
     <body>
             <nav class="bg-white p-5 md:mx-6 md:p-2 md:flex md:items-center md:justify-between z-[50] w-auto">
                 <div class="cursor-pointer flex justify-between items-center lg:w-1/5">
-                    <img src="assets/imgs/logo.svg" class="mx-4 h-20 lg:h-full lg-w-full" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
+                    <img src="./assets/imgs/logo.svg" class="mx-4 h-20 lg:h-full lg-w-full" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
 
                     <i id="menu" class="fa-solid fa-bars fa-xl text-3x1 cursor-pointer mx-2 md:hidden block" onclick="ToggleMenu(this);"></i>
 
                 </div>
 
                 <ul class="poppins-txt md:flex md:justify-between md:items-center z-[49] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 lg:w-4/5">
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">Comprar</li>
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">Vender</li>
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">Alugar</li>
+                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
+                        <a href="#">Comprar</a>
+                    </li>
+                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
+                        <a href="#">Vender</a>
+                        
+                    </li>
+                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
+                        <a href="#">Alugar</a>
+                    </li>
  
                     <div class="mx-4 my-6 md:my-0 md:ml-[8rem] flex flex-row items-center">
                         <i class="fa-solid fa-user fa-xl"></i>
-                        <p class="texto-login pl-2">Entrar</p>                   
+                        <a href="./pages/TelaLogin.html" class="texto-login pl-2">Entrar</a>                   
                     </div>
                 </ul>
                 
@@ -43,10 +50,10 @@
                     <div class="overflow-hidden relative h-48 sm:h-64 xl:h-80 2xl:h-96">
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
                             <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl ">Primer Slide</span>
-                            <img src="/assets/imgs/anuncio-easy-carros.png" class="block absolute top-1/2 left-1/2 h-full md:h-auto w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            <img src="./assets/imgs/anuncio-easy-carros.png" class="block absolute top-1/2 left-1/2 h-full md:h-auto w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                         </div>
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="/assets/imgs/doisCarros.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            <img src="./assets/imgs/doisCarros.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                         </div>
                     </div>
                     <!-- Bolinhas -->
@@ -111,7 +118,7 @@
                         </div>
 
                         <div class="flex p-2 sm:pe-4 md:pe-6 h-36 md:h-auto w-full sm:justify-center md:w-2/4 lg:w-1/3 sm:justify-center sm:align-center">
-                            <img class="h-full w-full items-center rounded-s object-cover" src="/assets/imgs/googlemaps-bg.png" alt="">
+                            <img class="h-full w-full items-center rounded-s object-cover" src="./assets/imgs/googlemaps-bg.png" alt="">
                         </div>
                     </div>
                 </section>
@@ -151,7 +158,7 @@
 
         <footer class="mt-2 h-20 sm:h-28 flex items-center justify-around bg-[#71ada8]">
             <div class="logo-empresa">
-                <img src="assets/imgs/logo.svg" class="h-20" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
+                <img src="./assets/imgs/logo.svg" class="h-20" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
             </div>
 
             <ul class="flex justify-between text-xs sm:text-lg">
@@ -216,10 +223,10 @@
             }
         }
 
-        GeraCadsVeiculos('listaCarros-horizontal', '/assets/imgs/carro-card.png');
-        GeraCadsVeiculos('listaMotos-horizontal', '/assets/imgs/moto-card.png');
-        GeraCadsVeiculos('listaVans-horizontal', '/assets/imgs/van-card.png');
-        GeraCadsVeiculos('listaCaminhoes-horizontal', '/assets/imgs/caminhao-card.png');
+        GeraCadsVeiculos('listaCarros-horizontal', './assets/imgs/carro-card.png');
+        GeraCadsVeiculos('listaMotos-horizontal', './assets/imgs/moto-card.png');
+        GeraCadsVeiculos('listaVans-horizontal', './assets/imgs/van-card.png');
+        GeraCadsVeiculos('listaCaminhoes-horizontal', './assets/imgs/caminhao-card.png');
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>

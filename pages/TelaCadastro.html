@@ -54,19 +54,19 @@
                     <div class="mt-4 space-y-4">
                         <div>
                             <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-                            <input id="email" type="email" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email">
+                            <input id="email" type="email" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email" required>
                         </div>
                         <div>
                             <label for="confirm-email" class="block text-gray-700 font-bold mb-2">Confirmação de Email</label>
-                            <input id="confirm-email" type="email" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Confirme o Email">
+                            <input id="confirm-email" type="email" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Confirme o Email" required>
                         </div>
                         <div>
                             <label for="senha" class="block text-gray-700 font-bold mb-2">Senha</label>
-                            <input id="senha" type="password" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Senha">
+                            <input id="senha" type="password" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Senha" required>
                         </div>
                         <div>
                             <label for="confirm-senha" class="block text-gray-700 font-bold mb-2">Confirmação de Senha</label>
-                            <input id="confirm-senha" type="password" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Confirme a Senha">
+                            <input id="confirm-senha" type="password" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Confirme a Senha" required>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label for="cep" class="block text-gray-700 font-bold mb-2">CEP</label>
-                                <input id="cep" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="CEP">
+                                <input id="cep" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="CEP" onblur="buscaCEP()">
                             </div>
                             <div>
                                 <label for="bairro" class="block text-gray-700 font-bold mb-2">Bairro</label>
@@ -103,7 +103,37 @@
                         </div>
                         <div>
                             <label for="estado" class="block text-gray-700 font-bold mb-2">Estado</label>
-                            <input id="estado" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Estado">
+                            <select id="estado" name="estado" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option>Estado:</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                            <!-- <input id="estado" type="text" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Estado"> -->
                         </div>
                     </div>
                 </div>
@@ -111,7 +141,7 @@
                 <!-- Botões de navegação para os passos -->
                 <div class="flex justify-between">
                     <button type="button" id="prevStep" class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Anterior</button>
-                    <button type="button" id="nextStep" class="bg-green hover:bg-dark-green text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Próximo</button>
+                    <button type="submit" id="nextStep" class="bg-green hover:bg-dark-green text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Próximo</button>
                 </div>
             </form>
         </div>
@@ -122,6 +152,10 @@
         const prevStepButton = document.getElementById('prevStep');
         const nextStepButton = document.getElementById('nextStep');
         const formSections = form.querySelectorAll('.mb-6');
+
+        const viaCEP = "https://viacep.com.br/ws/"
+
+
         let currentStep = 1;
 
         // Função para mostrar o passo atual e ocultar os outros
@@ -156,6 +190,31 @@
         // Adicionar eventos aos botões de navegação
         nextStepButton.addEventListener('click', nextStep);
         prevStepButton.addEventListener('click', prevStep);
+
+
+        function buscaCEP(){
+            const cep = document.getElementById("cep").value;
+        
+            const bairro = document.getElementById("bairro");
+            const cidade = document.getElementById("cidade");
+            const endereco = document.getElementById("endereco");
+            const estado = document.getElementById("estado");
+
+            fetch(viaCEP + cep + "/json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data)
+
+                bairro.value = data.bairro;
+                cidade.value = data.localidade;
+                endereco.value = data.logradouro;
+                estado.value = data.uf
+                
+              })
+            
+        }
     </script>
 </body>
 </html>
