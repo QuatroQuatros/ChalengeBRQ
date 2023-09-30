@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind Admin Template</title>
+    <title>Seu Dashboard</title>
     
     
 
@@ -20,15 +20,15 @@
         .upgrade-btn { background: #1947ee; }
         .upgrade-btn:hover { background: #0038fd; }
         .active-nav-link { background: #1947ee; }
-        .nav-item:hover { background: #1947ee; }
-        .account-link:hover { background: #3d68ff; }
+        .nav-item:hover { background: #95cac4; }
+        .account-link:hover { background: #95cac4; }
     </style>
 </head>
 <body class="bg-gray-200 font-family-karla flex">
 
     <aside class="bg-green relative h-screen w-64 hidden sm:block shadow-xl"><!--alterando a cor do menu-->
         <div class="p-6">
-            <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+            <a href="#" class="text-white text-3xl font-semibold uppercase">Admin</a>
             <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
                 <i class="fas fa-plus mr-3"></i> Novo relatorio
             </button>
@@ -38,23 +38,23 @@
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Administrativo
             </a>
-            <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <a href="blank.html" class="flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-sticky-note mr-3"></i>
                 Usuarios
             </a>
-            <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <a href="tables.html" class="flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-table mr-3"></i>
                Financeiro
             </a>
-            <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <a href="forms.html" class="flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-align-left mr-3"></i>
                 Acessos
             </a>
-            <a href="tabs.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <a href="tabs.html" class="flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-tablet-alt mr-3"></i>
                 Avaliações
             </a>
-            <a href="calendar.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <a href="calendar.html" class="flex items-center text-white hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-calendar mr-3"></i>
                 Calendário
             </a>
@@ -67,12 +67,13 @@
         <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
             <div class="w-1/2"></div>
             <div x-data="{ isOpen: false }" class="relative w-1/2 flex justify-end">
-                <button @click="isOpen = !isOpen" class="realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
-                    <img src="../assets/imgs/dands.png"><!--Imagem usuario-->
+                <button @click="isOpen = !isOpen" class="realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-200 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
+                    <img class="relative inline-block h-12 w-12 rounded-full object-cover object-center" alt="Image placeholder" src="../assets/imgs/leticiaPicture_.jpg"/><!--Imagem usuario-->
                 </button>
                 <button x-show="isOpen" @click="isOpen = false" class="h-full w-full fixed inset-0 cursor-default"></button>
                 <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
                     <a href="#" class="block px-4 py-2 account-link hover:text-white">Conta</a>
+                    <a href="../index.html" class="block px-4 py-2 account-link hover:text-white">Tela inicial</a>
                     <a href="#" class="block px-4 py-2 account-link hover:text-white">Suporte</a>
                     <a href="#" class="block px-4 py-2 account-link hover:text-white">Sair</a>
                 </div>
@@ -80,7 +81,7 @@
         </header>
 
         <!-- Navegação dispositivos moveis -->
-        <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
+        <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden bg-green">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
                 <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
@@ -91,41 +92,33 @@
 
             <!-- Menu Suspenso -->
             <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4">
-                <a href="index.html" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
+                <a href="#" class="flex items-center text-white opacity-90 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Relatórios
                 </a>
-                <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-sticky-note mr-3"></i>
-                    Blank Page
-                </a>
-                <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="#" class="flex items-center text-white opacity-90 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-table mr-3"></i>
-                    Tables
+                    Tabelas
                 </a>
-                <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="#" class="flex items-center text-white opacity-90 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-align-left mr-3"></i>
-                    Forms
+                    Formulários
                 </a>
-                <a href="tabs.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-tablet-alt mr-3"></i>
-                    Tabbed Content
-                </a>
-                <a href="calendar.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="#" class="flex items-center text-white opacity-90 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-calendar mr-3"></i>
-                    Calendar
+                    Calendário
                 </a>
-                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="#" class="flex items-center text-white opacity-90 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-cogs mr-3"></i>
-                    Support
+                    Suporte
                 </a>
-                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="#" class="flex items-center text-white opacity-90 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-user mr-3"></i>
-                    My Account
+                    Minha conta
                 </a>
-                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <a href="#" class="flex items-center text-white opacity-90 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-sign-out-alt mr-3"></i>
-                    Sign Out
+                    Sair
                 </a>
                 
             </nav>
