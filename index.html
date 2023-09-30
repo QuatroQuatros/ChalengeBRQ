@@ -10,7 +10,7 @@
 
         <title>EasyCarros</title>
 
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
     </head>
 
     <body>
@@ -34,7 +34,7 @@
                         <a href="#">Alugar</a>
                     </li>
  
-                    <div class="mx-4 my-6 md:my-0 md:ml-[8rem] flex flex-row items-center">
+                    <div class="mx-4 my-6 md:my-0 md:ml-[8rem] flex flex-row items-center cursor-pointer">
                         <i class="fa-solid fa-user fa-xl"></i>
                         <a href="./pages/TelaLogin.html" class="texto-login pl-2">Entrar</a>                   
                     </div>
@@ -87,10 +87,10 @@
                     <div class="w-auto flex flex-col-reverse md:flex-row justify-around">
                         <div class="filtros md:w-2/3">
                             <div class="p-2 flex flex-inline justify-between md:justify-around">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="/assets/imgs/Group_1.svg" alt="">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="/assets/imgs/Group_2.svg" alt="">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="/assets/imgs/Group_3.svg" alt="">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="/assets/imgs/Group_4.svg" alt="">
+                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="../assets/imgs/Group_1.svg" alt="">
+                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="../assets/imgs/Group_2.svg" alt="">
+                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="../assets/imgs/Group_3.svg" alt="">
+                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="../assets/imgs/Group_4.svg" alt="">
                             </div>
                             <div class="px-6 sm:ps-6 flex flex-col items-center md:items-start w-full">
                                 <div class="py-6 inputs flex flex-col lg:flex-row w-full">
@@ -125,29 +125,52 @@
                 <section>
                     <div id="">
                         <h1 class="txt-black my-2 ml-6 font-bold ">Carros</h1>
-                        <div class="w-full my-12">
-                            <div class="mx-6 flex flex-row items-center" id="listaCarros-horizontal">
+                        <div class="w-auto my-12 flex justify-between items-center">
+                            <div class="ml-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="mx-6 flex flex-row items-center" id="listaCarros-horizontal"></div>
+                            <div class="mr-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </div>
                         </div>
                     </div>
                     <div id="">
                         <h1 class="txt-black my-2 ml-6 font-bold ">Motos</h1>
-                        <div class="w-full my-12">
+                        <div class="w-full my-12 flex justify-between items-center">
+                            <div class="ml-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
                             <div class="mx-6 flex flex-row items-center" id="listaMotos-horizontal">
+                            </div>
+                            <div class="mr-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </div>
                         </div>
                     </div>
                     <div id="">
                         <h1 class="txt-black my-2 ml-6 font-bold ">Vans</h1>
-                        <div class="w-full my-12">
+                        <div class="w-full my-12 flex justify-between items-center">
+                            <div class="ml-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
                             <div class="mx-6 flex flex-row items-center" id="listaVans-horizontal">
+                            </div>
+                            <div class="mr-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </div>
                         </div>
                     </div>
                     <div id="">
                         <h1 class="txt-black my-2 ml-6 font-bold ">Caminhões</h1>
-                        <div class="w-full my-12">
+                        <div class="w-full my-12 flex justify-between items-center">
+                            <div class="ml-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
                             <div class="mx-6 flex flex-row items-center" id="listaCaminhoes-horizontal">
+                            </div>
+                            <div class="mr-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </div>
                         </div>
                     </div>
@@ -170,13 +193,21 @@
             </ul>
 
             <div class="w-18 sm:w-36">
-                <img src="./assets/imgs/carros_footer.svg" alt="Carros juntos">
+                <img src="../assets/imgs/carros_footer.svg" alt="Carros juntos">
             </div>
         </footer>
         
     </body>
 
     <script>
+        $ = document.querySelector.bind(document); 
+        $$ = document.querySelectorAll.bind(document); 
+
+        let largura = 'body';
+
+        largura = $(largura).clientWidth;
+
+
         function ToggleMenu(elemento) {
             let list = document.querySelector('ul');
             if (list.classList.contains('top-[120px]')) {
@@ -191,12 +222,22 @@
         }       
 
         function GeraCadsVeiculos(elementoId, caminhoImagem) {   
-            const pai = document.getElementById(elementoId); 
+        const pai = document.getElementById(elementoId); 
 
-            const numeroDeCards = 6;
-
-            for (let i = 0; i < numeroDeCards; i++) {
-                const card = document.createElement('div');
+        
+        if(largura <= 425){
+            numeroDeCards = 1;
+            
+        }else if(largura <= 768){
+            numeroDeCards = 3;
+        }else if(largura <= 1024){
+            numeroDeCards = 4;
+        }else{
+            var numeroDeCards = 5;
+        }
+        
+        for (let i = 0; i < numeroDeCards; i++) {
+            const card = document.createElement('div');
                 card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4');
 
                 card.innerHTML = `
