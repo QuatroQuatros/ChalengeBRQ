@@ -10,24 +10,24 @@
 
         <title>EasyCarros</title>
 
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
     </head>
 
     <body>
             <nav class="bg-white p-5 md:mx-6 md:p-2 md:flex md:items-center md:justify-between z-[50] w-auto">
                 <div class="cursor-pointer flex justify-between items-center lg:w-1/5">
-                    <img src="assets/imgs/logo.svg" class="mx-4 h-20 lg:h-full lg-w-full" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
+                    <img src="../assets/imgs/logo.svg" class="mx-4 h-20 lg:h-full lg-w-full" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
 
                     <i id="menu" class="fa-solid fa-bars fa-xl text-3x1 cursor-pointer mx-2 md:hidden block" onclick="ToggleMenu(this);"></i>
 
                 </div>
 
                 <ul class="poppins-txt md:flex md:justify-between md:items-center z-[49] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 lg:w-4/5">
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">Comprar</li>
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">Vender</li>
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">Alugar</li>
+                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500 cursor-pointer">Comprar</li>
+                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500 cursor-pointer">Vender</li>
+                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500 cursor-pointer">Alugar</li>
  
-                    <div class="mx-4 my-6 md:my-0 md:ml-[8rem] flex flex-row items-center">
+                    <div class="mx-4 my-6 md:my-0 md:ml-[8rem] flex flex-row items-center cursor-pointer">
                         <i class="fa-solid fa-user fa-xl"></i>
                         <p class="texto-login pl-2">Entrar</p>                   
                     </div>
@@ -43,10 +43,10 @@
                     <div class="overflow-hidden relative h-48 sm:h-64 xl:h-80 2xl:h-96">
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
                             <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl ">Primer Slide</span>
-                            <img src="/assets/imgs/anuncio-easy-carros.png" class="block absolute top-1/2 left-1/2 h-full md:h-auto w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            <img src="../assets/imgs/anuncio-easy-carros.png" class="block absolute top-1/2 left-1/2 h-full md:h-auto w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                         </div>
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="/assets/imgs/doisCarros.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            <img src="../assets/imgs/logo.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
                         </div>
                     </div>
                     <!-- Bolinhas -->
@@ -80,10 +80,10 @@
                     <div class="w-auto flex flex-col-reverse md:flex-row justify-around">
                         <div class="filtros md:w-2/3">
                             <div class="p-2 flex flex-inline justify-between md:justify-around">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="/assets/imgs/Group_1.svg" alt="">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="/assets/imgs/Group_2.svg" alt="">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="/assets/imgs/Group_3.svg" alt="">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="/assets/imgs/Group_4.svg" alt="">
+                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="../assets/imgs/Group_1.svg" alt="">
+                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="../assets/imgs/Group_2.svg" alt="">
+                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="../assets/imgs/Group_3.svg" alt="">
+                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" src="../assets/imgs/Group_4.svg" alt="">
                             </div>
                             <div class="px-6 sm:ps-6 flex flex-col items-center md:items-start w-full">
                                 <div class="py-6 inputs flex flex-col lg:flex-row w-full">
@@ -111,36 +111,59 @@
                         </div>
 
                         <div class="flex p-2 sm:pe-4 md:pe-6 h-36 md:h-auto w-full sm:justify-center md:w-2/4 lg:w-1/3 sm:justify-center sm:align-center">
-                            <img class="h-full w-full items-center rounded-s object-cover" src="/assets/imgs/googlemaps-bg.png" alt="">
+                            <img class="h-full w-full items-center rounded-s object-cover" src="../assets/imgs/googlemaps-bg.png" alt="">
                         </div>
                     </div>
                 </section>
                 <section>
                     <div id="">
                         <h1 class="txt-black my-2 ml-6 font-bold ">Carros</h1>
-                        <div class="w-full my-12">
-                            <div class="mx-6 flex flex-row items-center" id="listaCarros-horizontal">
+                        <div class="w-auto my-12 flex justify-between items-center">
+                            <div class="ml-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="mx-6 flex flex-row items-center" id="listaCarros-horizontal"></div>
+                            <div class="mr-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </div>
                         </div>
                     </div>
                     <div id="">
                         <h1 class="txt-black my-2 ml-6 font-bold ">Motos</h1>
-                        <div class="w-full my-12">
+                        <div class="w-full my-12 flex justify-between items-center">
+                            <div class="ml-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
                             <div class="mx-6 flex flex-row items-center" id="listaMotos-horizontal">
+                            </div>
+                            <div class="mr-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </div>
                         </div>
                     </div>
                     <div id="">
                         <h1 class="txt-black my-2 ml-6 font-bold ">Vans</h1>
-                        <div class="w-full my-12">
+                        <div class="w-full my-12 flex justify-between items-center">
+                            <div class="ml-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
                             <div class="mx-6 flex flex-row items-center" id="listaVans-horizontal">
+                            </div>
+                            <div class="mr-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </div>
                         </div>
                     </div>
                     <div id="">
                         <h1 class="txt-black my-2 ml-6 font-bold ">Caminhões</h1>
-                        <div class="w-full my-12">
+                        <div class="w-full my-12 flex justify-between items-center">
+                            <div class="ml-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
                             <div class="mx-6 flex flex-row items-center" id="listaCaminhoes-horizontal">
+                            </div>
+                            <div class="mr-3 cursor-pointer">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </div>
                         </div>
                     </div>
@@ -151,7 +174,7 @@
 
         <footer class="mt-2 h-20 sm:h-28 flex items-center justify-around bg-[#71ada8]">
             <div class="logo-empresa">
-                <img src="assets/imgs/logo.svg" class="h-20" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
+                <img src="../assets/imgs/logo.svg" class="h-20" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
             </div>
 
             <ul class="flex justify-between text-xs sm:text-lg">
@@ -163,13 +186,21 @@
             </ul>
 
             <div class="w-18 sm:w-36">
-                <img src="./assets/imgs/carros_footer.svg" alt="Carros juntos">
+                <img src="../assets/imgs/carros_footer.svg" alt="Carros juntos">
             </div>
         </footer>
         
     </body>
 
     <script>
+        $ = document.querySelector.bind(document); 
+        $$ = document.querySelectorAll.bind(document); 
+
+        let largura = 'body';
+
+        largura = $(largura).clientWidth;
+
+
         function ToggleMenu(elemento) {
             let list = document.querySelector('ul');
             if (list.classList.contains('top-[120px]')) {
@@ -184,12 +215,22 @@
         }       
 
         function GeraCadsVeiculos(elementoId, caminhoImagem) {   
-            const pai = document.getElementById(elementoId); 
+        const pai = document.getElementById(elementoId); 
 
-            const numeroDeCards = 6;
-
-            for (let i = 0; i < numeroDeCards; i++) {
-                const card = document.createElement('div');
+        
+        if(largura <= 425){
+            numeroDeCards = 1;
+            
+        }else if(largura <= 768){
+            numeroDeCards = 3;
+        }else if(largura <= 1024){
+            numeroDeCards = 4;
+        }else{
+            var numeroDeCards = 5;
+        }
+        
+        for (let i = 0; i < numeroDeCards; i++) {
+            const card = document.createElement('div');
                 card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4');
 
                 card.innerHTML = `
@@ -216,10 +257,10 @@
             }
         }
 
-        GeraCadsVeiculos('listaCarros-horizontal', '/assets/imgs/carro-card.png');
-        GeraCadsVeiculos('listaMotos-horizontal', '/assets/imgs/moto-card.png');
-        GeraCadsVeiculos('listaVans-horizontal', '/assets/imgs/van-card.png');
-        GeraCadsVeiculos('listaCaminhoes-horizontal', '/assets/imgs/caminhao-card.png');
+        GeraCadsVeiculos('listaCarros-horizontal', '../assets/imgs/carro-card.png');
+        GeraCadsVeiculos('listaMotos-horizontal', '../assets/imgs/moto-card.png');
+        GeraCadsVeiculos('listaVans-horizontal', '../assets/imgs/van-card.png');
+        GeraCadsVeiculos('listaCaminhoes-horizontal', '../assets/imgs/caminhao-card.png');
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
