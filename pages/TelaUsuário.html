@@ -16,7 +16,8 @@
     <header>
         <div class="greetings flex justify-around items-center w-full h-20 mt-6 mb-24 text-base gap-28">
             <div><a href="../index.html">Voltar</a></div>
-            <div><a href="../pages/TelaDash.html">Dashboards</a></div>
+            <div>&nbsp;</div>
+            <!-- <div><a href="../pages/TelaDash.html">Dashboards</a></div> -->
             <h1> <img class="relative inline-block h-12 w-12 rounded-full object-cover object-center" alt="Image placeholder" src="../assets/imgs/leticiaPicture_.jpg"/> Letícia Souza</h1>
         </div>
     </header>
@@ -47,56 +48,87 @@
             </div>
             <div class="flex flex-wrap -mx-3 mb-2">
                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="cidade">
                         <i class="fa-solid fa-house" style="color: #4abbae;"></i> Cidade
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="grid-city" type="text" placeholder="Embu">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="cidade" type="text" placeholder="Embu">
                 </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="estado">
                 Estado
                 </label>
                 <div class="relative">
-                    <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white" id="grid-state">
-                        <option>São Paulo</option>
-                        <option>Minas Gerais</option>
-                        <option>Rio de Janeiro</option>
+                    <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white" id="estado">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
                     </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
                 </div>
-            </div>
             </div>
                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                     CEP
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="grid-zip" type="text" placeholder="00000-00">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="cep" type="text" placeholder="00000-00" onblur="buscaCEP()">
                 </div>
             </div>
         </form>
 
-        <form class="w-1/2 max-w-lg">
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-bairro">
+        <form class="w-1/3 max-w-lg">
+            <div class="flex flex-wrap -mx-8 mb-6">
+                <div class="w-full md:w-1/3 px-2 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="bairro">
                     Bairro
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-bairro" type="text" placeholder="Jardim Anjo">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="bairro" type="text" placeholder="Jardim Anjo">
                 </div>
-            <div class="w-full md:w-1/2 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-endereco">
-                Endereço
-                </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="grid-endereco" type="text" placeholder="Rua Maria">
+                <div class="w-full md:w-1/3 px-2">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="endereco">
+                    Endereço
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white" id="endereco" type="text" placeholder="Rua Maria">
+                </div>
+                <div class="w-full md:w-1/3 px-2">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="numero">
+                    numero
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:bg-white" id="numero" type="text" placeholder="1234">
+                </div>
             </div>
-            </div>
-            <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="flex flex-wrap -mx-8 mb-6">
                 <div class="w-full px-3">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-cnh">
                         <i class="fa-solid fa-id-card" style="color: #4abbae;"></i> CNH
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-cnh" type="password" placeholder="0000000000">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-cnh" type="text" placeholder="0000000000">
                     <p class="text-gray-600 text-xs italic">Atualize aqui o número da sua CNH</p>
                 </div>
             </div>
@@ -106,6 +138,33 @@
         </form>
 
     </main>
+
+    <script>
+        const viaCEP = "https://viacep.com.br/ws/"
+        function buscaCEP(){
+            const cep = document.getElementById("cep").value;
+        
+            const bairro = document.getElementById("bairro");
+            const cidade = document.getElementById("cidade");
+            const endereco = document.getElementById("endereco");
+            const estado = document.getElementById("estado");
+
+            fetch(viaCEP + cep + "/json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data)
+
+                bairro.value = data.bairro;
+                cidade.value = data.localidade;
+                endereco.value = data.logradouro;
+                estado.value = data.uf
+                
+              })
+            
+        }
+    </script>
 
 </body>
 </html>
