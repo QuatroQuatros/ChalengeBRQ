@@ -1,7 +1,3 @@
-CREATE DATABASE fintech;
-
-DROP DATABASE fintech;
-
 CREATE TABLE usuarios (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(60) NOT NULL,
@@ -89,4 +85,31 @@ CREATE TABLE economia_usuarios (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+)
+
+
+CREATE TABLE corretoras (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(300) NOT NULL,
+    bolsa VARCHAR(300) NOT NULL,
+    codigo VARCHAR(200) NOT NULL,
+    pais VARCHAR(250) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+ 
+
+CREATE TABLE investimentos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_usuario INT NOT NULL,
+    id_corretora INT NOT NULL,
+    ativo VARCHAR(300) NOT NULL,
+    valor DOUBLE NOT NULL,
+    juros DOUBLE NOT NULL,
+    data_compra DATE NOT NULL,
+    data_vencimento DATE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
+    FOREIGN KEY (id_corretora) REFERENCES corretoras(id)
 )
