@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/historicoLocacao.css"> 
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+    <title>Seu histórico de locações</title>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <div class="headerITENS_visualizaCarro flex justify-around items-center shadow-md mb-14 py-2">
+            <img class="w-24" src="../assets/imgs/logo.svg" alt="">
+            <a href="#">Comprar</a>
+            <a href="#">Vender</a>
+            <a href="#">Alugar</a>
+            <a href="#">Saiba Mais</a>
+            <a href="#">Sobre nós</a>
+            <div class="flex justify-center items-center gap-2">
+                <a href="#"> <img class="relative inline-block h-12 w-12 rounded-full object-cover object-center" alt="Image placeholder" src="../assets/imgs/leticiaPicture_.jpg"/> Letícia Souza</a>
+                <a class="editData mr-5 rounded-xl w-44 h-6 text-center text-sm bg-[#bfdad7]" href="../pages/TelaUsuário.html">editar dados pessoais</a> 
+            </div>
+        </div>
+    </header>
+
+    <main>
+         <!-- barra de pesquisa  -->
+         <form class="mb-20 ml-20">   
+            <label for="default-search" class="mb-2 text-sm font-medium text-black-900 sr-only dark:text-black">Search</label>
+            <div class="relative w-2/4 ">
+                <div class="absolute  inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block md:flex w-full p-4 pl-10 text-sm text-gray-900 border border-gray-900 rounded-lg bg-[#ffffff] focus:ring-gray-500 focus:border-gray-500 dark:bg-[#ffffff] dark:border-gray-400 dark:placeholder-gray-400 dark:text-black dark:focus:ring-gray-200 dark:focus:border-gray-200" placeholder="Procure por lugares, preços..." required>
+                <button type="submit" class="text-black absolute right-2.5 bottom-2.5 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#bfdad7]">Search</button>
+            </div>
+        </form>
+
+            <!-- historico  -->
+        <div>
+            <div class="carro_um border">
+                <img src="../assets/imgs/hero.webp" alt="">
+                <div class="carroCaracteristicas">
+                    <h1>Jeep Renegade</h1>
+                    <p class="dateTime"> <i class="fa-solid fa-calendar-days" style="color: #4abbae;"></i> Data e Hora: 18/12/22 - 10:15</p>
+                    <p> <i class="fa-solid fa-credit-card" style="color: #4abbae;"></i> Valor: R$350,00</p>
+                </div>
+                <div class="carroCaracteristicas">
+                    <p> <i class="fa-solid fa-location-dot" style="color: #4abbae;"></i> Local de Retirada: Pinheiros, SP</p>
+                    <p> <i class="fa-solid fa-location-dot" style="color: #4abbae;"></i> Local de devolução: Pinheiros, SP</p>
+                    <a href="#"> <i class="fa-solid fa-star" style="color: #4abbae;"></i> Sua avaliação</a>
+                </div>
+                <button class="text-black right-2.5 bottom-2.5 focus:outline-none font-medium rounded-lg text-sm px-2 py-2 dark:bg-[#bfdad7]">
+                    <a href="../pages/visualizarCarro.html">alugar novamente</a>
+                </button>
+            </div>
+
+            <div class="carro_dois border">
+                <img src="../assets/imgs/hb20.png" alt="">
+                <div class="carroCaracteristicas">
+                    <h1>HB20S</h1>
+                    <p class="dateTime"> <i class="fa-solid fa-calendar-days" style="color: #4abbae;"></i> Data e Hora: 10/03/23 - 09:00</p>
+                    <p> <i class="fa-solid fa-credit-card" style="color: #4abbae;"></i> Valor: R$400,00</p>
+                </div>
+                <div class="carroCaracteristicas">
+                    <p> <i class="fa-solid fa-location-dot" style="color: #4abbae;"></i> Local de Retirada: São Roque, SP</p>
+                    <p> <i class="fa-solid fa-location-dot" style="color: #4abbae;"></i> Local de devolução: São Roque, SP</p>
+                    <a href="#"> <i class="fa-solid fa-star" style="color: #4abbae;"></i> Sua avaliação</a>
+                </div>
+
+                <button class="text-black right-2.5 bottom-2.5 focus:outline-none font-medium rounded-lg text-sm px-2 py-2 dark:bg-[#bfdad7]">
+                    <a href="../pages/visualizarCarro.html">alugar novamente</a>
+                </button>
+            </div>
+
+            <div class="carro_tres border">
+                <img src="../assets/imgs/CRONOS.webp" alt="">
+                <div class="carroCaracteristicas">
+                    <h1>Cronos</h1>
+                    <p class="dateTime"> <i class="fa-solid fa-calendar-days" style="color: #4abbae;"></i> Data e Hora: 20/05/23 - 11:30</p>
+                    <p> <i class="fa-solid fa-credit-card" style="color: #4abbae;"></i> Valor: R$450,00</p>
+                </div>
+                <div class="carroCaracteristicas">
+                    <p> <i class="fa-solid fa-location-dot" style="color: #4abbae;"></i> Local de Retirada: São Paulo, SP</p>
+                    <p> <i class="fa-solid fa-location-dot" style="color: #4abbae;"></i> Local de devolução: São Paulo, SP</p>
+                    <a href="#"> <i class="fa-solid fa-star" style="color: #4abbae;"></i> Avaliar aluguel</a>
+                </div>
+
+                <button class="text-black right-2.5 bottom-2.5 focus:outline-none font-medium rounded-lg text-sm px-2 py-2 dark:bg-[#bfdad7]">
+                    <a href="../pages/visualizarCarro.html">alugar novamente</a>
+                </button>
+            </div>
+
+            <div class="carro_quatro border">
+                <img src="../assets/imgs/NISSANimg.png" alt="">
+                <div class="carroCaracteristicas">
+                    <h1>Nissan Kicks</h1>
+                    <p class="dateTime"> <i class="fa-solid fa-calendar-days" style="color: #4abbae;"></i> Data e Hora: 25/07/23 - 09:00</p>
+                    <p> <i class="fa-solid fa-credit-card" style="color: #4abbae;"></i> Valor: R$450,00</p>
+                </div>
+                <div class="carroCaracteristicas">
+                    <p> <i class="fa-solid fa-location-dot" style="color: #4abbae;"></i> Local de Retirada: São Paulo, SP</p>
+                    <p> <i class="fa-solid fa-location-dot" style="color: #4abbae;"></i> Local de devolução: São Paulo, SP</p>
+                    <a href="#"> <i class="fa-solid fa-star" style="color: #4abbae;"></i> Avaliar aluguel</a>
+                </div>
+
+                <button class="text-black right-2.5 bottom-2.5 focus:outline-none font-medium rounded-lg text-sm px-2 py-2 dark:bg-[#bfdad7]">
+                    <a href="../pages/visualizarCarro.html">alugar novamente</a>
+                </button>
+            </div>
+
+            <div class="carro_cinco border md:flex">
+                <img src="../assets/imgs/Peugeot3008.webp" alt="">
+                <div class="carroCaracteristicas">
+                    <h1>Peugeot 2008</h1>
+                    <p class="dateTime"> <i class="fa-solid fa-calendar-days" style="color: #4abbae;"></i> Data e Hora: 22/09/23 - 12:00</p>
+                    <p> <i class="fa-solid fa-credit-card" style="color: #4abbae;"></i> Valor: R$300,00</p>
+                </div>
+                <div class="carroCaracteristicas">
+                    <p> <i class="fa-solid fa-location-dot" style="color: #4abbae;"></i> Local de Retirada: São Paulo, SP</p>
+                    <p> <i class="fa-solid fa-location-dot" style="color: #4abbae;"></i> Local de devolução: São Paulo, SP</p>
+                    <a href="#"> <i class="fa-solid fa-star" style="color: #4abbae;"></i> Avaliar aluguel</a>
+                </div>
+
+                <button class="text-black right-2.5 bottom-2.5 focus:outline-none font-medium rounded-lg text-sm px-2 py-2 dark:bg-[#bfdad7]">
+                    <a href="../pages/visualizarCarro.html">alugar novamente</a>
+                </button>
+            </div>
+
+            <!-- cabeçalho -->
+            <footer class="h-28 flex items-center justify-around bg-[#a0d1cb]">
+    
+                <ul class="poppins-txt flex justify-between font-regular">
+                    <li><p>Copyright BatataCars &copy; 2023 </p></li>
+                </ul>
+    
+                <div class="w-36">
+                    <img src="../assets/imgs/carros_footer.svg" alt="Carros juntos">
+                </div>
+            </footer>
+
+        </div>
+    </main>
+    
+</body>
