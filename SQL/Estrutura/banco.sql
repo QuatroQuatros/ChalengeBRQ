@@ -1,3 +1,7 @@
+CREATE DATABASE fintech
+
+USE fintech
+
 CREATE TABLE usuarios (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(60) NOT NULL,
