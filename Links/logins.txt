@@ -1,0 +1,11 @@
+Para acessar os dashboards, precisa fazer os logins
+
+Dashboard Admin
+
+Email: adm@adm.com
+Senha senha123
+
+Dashboard Locador
+
+Email: user@user.com
+Senha senha123
