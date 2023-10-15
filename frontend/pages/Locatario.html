@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locatario</title>
+    
+    
+
+    <!-- Tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/js/tailwind-config.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+        .font-family-karla { font-family: karla; }
+        .bg-sidebar { background: #3d68ff; }
+        .cta-btn { color: #3d68ff; }
+        .upgrade-btn { background: #1947ee; }
+        .upgrade-btn:hover { background: #0038fd; }
+        .active-nav-link { background: #1947ee; }
+        .nav-item:hover { background: #1947ee; }
+        .account-link:hover { background: #3d68ff; }
+    </style>
+</head>
+<body class="bg-gray-200 font-family-karla flex">
+
+    <aside class="bg-green relative h-screen w-64 hidden sm:block shadow-xl">
+        <div class="p-6">
+            <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+            
+        </div>
+        <nav class="text-white text-base font-semibold pt-3">
+            <a href="TelaDash.html" class="flex items-center  text-white py-4 pl-6 nav-item">
+                <i class="fas fa-tachometer-alt mr-3"></i>
+                Administrativo
+            </a>
+            <a href="Locador.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                <i class="fas fa-sticky-note mr-3"></i>
+                Locadores
+            </a>
+            <a href="Locatario.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                <i class="fas fa-table mr-3"></i>
+                Locatarios
+            </a>
+            <!-- <a href="index.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                <i class="fas fa-align-left mr-3"></i>
+                Veiculos
+            </a> -->
+            <a href="TelaLogin.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                <i class="fas fa-tablet-alt mr-3"></i>
+                Sair
+           
+        </nav>
+      
+    </aside>
+
+    <div class="w-full flex flex-col h-screen overflow-y-hidden">
+       
+        <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
+            <div class="flex items-center">
+                
+                <div></div>
+            
+                
+<span class="flex items-center text-sm font-medium text-black "><span class="flex w-2.5 h-2.5 bg-green-600 rounded-full mr-1.5 flex-shrink-0"></span >Ativos</span>
+<span class="flex items-center text-sm font-medium text-black "><span class="flex w-2.5 h-2.5 bg-white-500 rounded-full mr-1.5 flex-shrink-0"></span>139.657</span>
+
+
+                
+              </div>
+        </header>
+
+        
+        <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+                <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
+                    <i x-show="!isOpen" class="fas fa-bars"></i>
+                    <i x-show="isOpen" class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4">
+                <a href="index.html" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
+                    <i class="fas fa-tachometer-alt mr-3"></i>
+                    Geral
+                </a>
+                <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <i class="fas fa-sticky-note mr-3"></i>
+                    Administrativo
+                </a>
+                <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <i class="fas fa-table mr-3"></i>
+                    Usuário
+                </a>
+                <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <i class="fas fa-align-left mr-3"></i>
+                    Locadores
+                </a>
+                <a href="tabs.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <i class="fas fa-tablet-alt mr-3"></i>
+                    Locatarios
+                </a>
+                <a href="calendar.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <i class="fas fa-calendar mr-3"></i>
+                    Calendário
+                </a>
+                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <i class="fas fa-cogs mr-3"></i>
+                    Suporte
+                </a>
+                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <i class="fas fa-user mr-3"></i>
+                    Conta
+                </a>
+                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <i class="fas fa-sign-out-alt mr-3"></i>
+                    Sair
+                </a>
+                
+            </nav>
+            <!-- <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
+                <i class="fas fa-plus mr-3"></i> New Report
+            </button> -->
+        </header>
+    
+        <div class="w-full overflow-x-hidden border-t flex flex-col">
+            <main class="w-full flex-grow p-6">
+                <h1 class="text-3xl text-black pb-6">Locatário</h1><!--Div dos Dash-->
+                <!--Relatorio1-->
+               
+    
+                <div class="w-full mt-12">
+                    <p class="text-xl pb-3 flex items-center">
+                        <i class="fas fa-list mr-3"></i> Atividade atual
+                    </p>
+                    <div class="bg-white overflow-auto">
+                        <table class="min-w-full bg-white">
+                            <thead class="bg-gray-800 text-white">
+                                <tr><!--Colunas-->
+                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Cliente</th>
+                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Status</th>
+                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Marca</th>
+                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Modelo</th>
+                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Placa</th>
+                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Data Locação</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700">
+                                <tr><!--Incluir o nome dos veiculos nas colunas e seus modelos-->
+                                    <td class="w-1/3 text-left py-3 px-4">Luiz da Silva Oliveira</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Hyundai">Hyundai</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Sonata">Sonata</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:25/09">25/09</a></td> 
+                                </tr>
+                                <tr class="bg-gray-200">
+                                    <td class="w-1/3 text-left py-3 px-4">Ana Carolina Santos</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Inativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Hyundai">Hyundai</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Elantra">Elantra</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:11/09">11/09</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-1/3 text-left py-3 px-4">Rafael Pereira Alves</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Ford">Ford</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Ka">Ka</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:15/09">15/09</a></td>
+                                </tr>
+                                <tr class="bg-gray-200">
+                                    <td class="w-1/3 text-left py-3 px-4">Mariana da Costa Lima</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Toyota">Toyota</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">Sienna</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:11/09">11/09</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-1/3 text-left py-3 px-4">Carlos Eduardo Ferreira dos Santos</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Inativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:v">Citroën</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="C4">C4</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:04/09">04/09</a></td>
+                                </tr>
+                                <tr class="bg-gray-200">
+                                    <td class="w-1/3 text-left py-3 px-4">João Marcelo Pereira Souza</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:John Deere">John Deere</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="John Deere">Trator John Deere</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:09/09">09/09</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-1/3 text-left py-3 px-4">Laura Silva Rodrigues</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Honda">Honda</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Civic">Civic</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:29/09">29/09</a></td>
+                                </tr>
+                                <tr class="bg-gray-200">
+                                    <td class="w-1/3 text-left py-3 px-4">Thiago de Souza Martins</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Ford">Ford</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Ka">Ka</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:30/09">30/09</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-1/3 text-left py-3 px-4">Carlos Silva Rodrigues</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Inativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Pegeout">Pegeout</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">5008</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:17/09">17/09</a></td>
+                                </tr>
+                                <tr class="bg-gray-200">
+                                    <td class="w-1/3 text-left py-3 px-4">Brenda de Souza Martins</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:John Deere">John Deere</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="John Deere">Trator John Deere</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:25/09">25/09</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-1/3 text-left py-3 px-4">Veigo Araujo Rodrigues</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Hyundai">Hyundai</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Sonata">Sonata</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:28/09">28/09</a></td>
+                                </tr>
+                                <tr class="bg-gray-200">
+                                    <td class="w-1/3 text-left py-3 px-4">Carlos Maia de Souza Martins</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Ford">Ford</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Ka">Ka</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:22/09">22/09</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-1/3 text-left py-3 px-4">Henrique Oliveira Machado</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Chevrolet">Chevrolet</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Silverado">Silverado</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:25/09">25/09</a></td>
+                                </tr>
+                                <tr class="bg-gray-200">
+                                    <td class="w-1/3 text-left py-3 px-4">Laura Marcelli Almeida</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Inativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Mercedes">Mercedes-Benz</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Classe C">Classe C</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:15/09">15/09</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-1/3 text-left py-3 px-4">Yasmin Costa Canto</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Inativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Toyota">Toyota</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Corolla">Corolla</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:01/09">01/09</a></td>
+                                </tr>
+                                <tr class="bg-gray-200">
+                                    <td class="w-1/3 text-left py-3 px-4">Guilherme Silva Ferreira</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Renalt">Renalt</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Clio">Clio</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:03/09">03/09</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-1/3 text-left py-3 px-4">Derick Rosano Cabral</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Pegeout">Pegeout</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="5008">5008</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:04/09">04/09</a></td>
+                                </tr>
+                                <tr class="bg-gray-200">
+                                    <td class="w-1/3 text-left py-3 px-4">Brenda Pinto Martins</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Hyundai">Hyundai</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Elantra">Elantra</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:20/09">20/09</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-1/3 text-left py-3 px-4">Denilson Luis Pinheiro</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Ativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Pegeout">Pegeout</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="5008">5008</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:10/09">10/09</a></td>
+                                </tr>
+                                <tr class="bg-gray-200">
+                                    <td class="w-1/3 text-left py-3 px-4">Thiago Henrique Fincher</td>
+                                    <td class="w-1/3 text-left py-3 px-4">Inativo</td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="modelo:Hyundai">Hyundai</a></td>
+                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="Elantra">Elantra</a></td>
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="123BRQ">123BRQ</a></td> 
+                                    <td class="text-center py-3 px-4"><a class="hover:text-blue-500" href="data:25/09">25/09</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+    
+           
+        </div>
+        
+    </div>
+
+    <!-- AlpineJS -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    <!-- ChartJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>

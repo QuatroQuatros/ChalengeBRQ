@@ -36,7 +36,7 @@ body {
     justify-content: space-around;
     align-items: center; 
     margin-top: 35px;
-    background-color: #8fd3cc99;
+    background-color: #d8ebe8;
     height: 130px;
   }
 
@@ -136,9 +136,134 @@ body {
 }
 
 .botao_visualiza {
-    background-color: #80ccc3;
+    background-color: #a3d3cd;
     width: 200px;
     height: 50px;
     border-radius: 10px;
     font-weight: 700;
+}
+
+@media (max-width: 1216px) {
+
+  .headerITENS_visualizaCarro a {
+    padding: 18px;
+    font-size: 17px;
+  }
+
+  .nomeCarro_visualiza h1, a {
+    font-size: 19px;
+  }
+
+  .fa-solid {
+    font-size: 20px;
+  }
+
+  .carroDados_visualiza li {
+    font-size: 17px;
+  }
+
+}
+
+@media (max-width: 978px) {
+
+  .headerITENS_visualizaCarro a {
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .nomeCarro_visualiza h1, a {
+    font-size: 18px;
+  }
+
+  .fa-solid {
+    font-size: 19px;
+  }
+
+  .carroDados_visualiza li {
+    font-size: 16px;
+  }
+
+  .botao_visualiza {
+    width: 170px;
+  }
+
+}
+
+@media (max-width: 900px) and (min-width: 896px) {
+
+  .headerITENS_visualizaCarro a {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .botaoContinuar {
+    margin-right: 70px;
+  }
+
+  .botao_visualiza {
+    width: 140px;
+  }
+
+}
+
+@media (max-width: 748px) {
+
+  .headerITENS_visualizaCarro a {
+    padding: 20px;
+    width: 30%;
+    font-size: 14px;
+  }
+
+  .nomeCarro_visualiza h1 {
+    font-size: 17px;
+  }
+
+  .fa-solid {
+    font-size: 17px;
+  }
+
+  .carroDados_visualiza li {
+    font-size: 16px;
+    justify-content: center;
+  }
+
+  .carroEspecifics_2 {
+    flex-direction: row;
+    margin-right: 20px;
+  }
+
+  .sliderVisualizar img {
+    width: 100%;
+  } 
+
+  .botao_visualiza {
+    width: 130px;
+  }
+
+}
+
+@media (max-width: 590px) {
+
+  .sliderVisualizar {
+    width: 100%;
+  }
+
+  .carroEspecifics_2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .carroDados_visualiza {
+    margin-left: 100px;
+    margin-bottom: 90px;
+  }
+
+  .botaoContinuar {
+    margin-right: 40px;
+    margin-bottom: 10px;
+  }
+
+  .botao_visualiza {
+    width: 120px;
+  }
 }
