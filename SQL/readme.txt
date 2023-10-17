@@ -1,0 +1,1 @@
+para testar as consultas no ambiente da oracle, crie a sequence depois o trigger, pois as vezes o SGBD não reconhece a sequence e da erro ao cadastrar o dado.

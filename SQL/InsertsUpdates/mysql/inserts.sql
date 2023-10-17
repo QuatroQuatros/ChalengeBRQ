@@ -1,13 +1,11 @@
-INSERT INTO users VALUES ()
-
 -- Inserção de dados na tabela usuarios
 INSERT INTO usuarios (nome, email, senha, data_nascimento, foto, cpf)
 VALUES
   ('João Silva', 'joao@email.com', 'senha123', '1990-01-01', 'foto1.jpg', '12345678901'),
   ('Maria Oliveira', 'maria@email.com', 'senha456', '1985-02-15', 'foto2.jpg', '23456789012');
 
--- Inserção de dados na tabela recorencias
-INSERT INTO recorencias (descricao, juros)
+-- Inserção de dados na tabela recorrencias
+INSERT INTO recorrencias (descricao, juros)
 VALUES
   ('Mensal', 0.05),
   ('Anual', 0.10);
