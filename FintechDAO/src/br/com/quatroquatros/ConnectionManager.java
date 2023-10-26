@@ -10,8 +10,8 @@ public class ConnectionManager {
 
     private final String SID = "ORCL";
     private final String url = "jdbc:oracle:thin:@//oracle.fiap.com.br:1521/" + SID;
-    private final String username = "RM98748";
-    private final String password = "091203";
+    private final String username = "rm552375";
+    private final String password = "220403";
     
     private ConnectionManager() {
     	
