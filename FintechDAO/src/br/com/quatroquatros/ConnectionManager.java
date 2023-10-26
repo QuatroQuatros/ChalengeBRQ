@@ -39,4 +39,10 @@ public class ConnectionManager {
         }
     	return conn;
     }
+
+
+	public void closeConnection() {
+		// TODO Auto-generated method stub
+		
+	}
 }
