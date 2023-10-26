@@ -219,12 +219,12 @@ public class main {
 //    	metaDAO.atualizarMeta(metaParaAtualizar);
 
 		//----Atualizar Status Meta -----//	
-//		
-////		Meta atualizarStatusMeta = new Meta();
-////		atualizarStatusMeta.setStatus(0);
-////		atualizarStatusMeta.setId(10);
-////		metaDAO.atualizarStatusMeta(atualizarStatusMeta);
-//		
+		
+//		Meta atualizarStatusMeta = new Meta();
+//		atualizarStatusMeta.setStatus(0);
+//		atualizarStatusMeta.setId(10);
+//		metaDAO.atualizarStatusMeta(atualizarStatusMeta);
+		
 		//----Deletar Meta----/		
 //	    metaDAO.deletarMeta(10);
 	    
