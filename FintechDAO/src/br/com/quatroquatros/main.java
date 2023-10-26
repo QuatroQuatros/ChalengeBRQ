@@ -1,31 +1,44 @@
 package br.com.quatroquatros;
 
+
+import java.sql.Date;
 import java.util.List;
 
 import DAO.UsuarioDAOImpl;
 import DAO.RecorrenciaDAOImpl;
 import DAO.TipoDespesaDAOImpl;
 import DAO.TipoRendaDAOImpl;
+import DAO.RendasDAOImpl;
+import DAO.DespesasDAO;
+import DAO.DespesasDAOImpl;
 import Models.Usuario;
 import Models.TipoDespesa;
 import Models.TipoRenda;
 import Models.Recorrencia;
+import Models.Rendas;
+import Models.Despesas;
 
 public class main {
 	 private static UsuarioDAOImpl userDao;
 	 private static RecorrenciaDAOImpl recorrenciaDao;
 	 private static TipoDespesaDAOImpl tipoDespesaDao;
 	 private static TipoRendaDAOImpl tipoRendaDao;
-
-	public static void main(String[] args) {
+	 private static RendasDAOImpl RendasDao;
+	 private static DespesasDAOImpl DespesasDao;
+	 public static void main(String[] args) {
 		userDao = new UsuarioDAOImpl();
 		recorrenciaDao = new RecorrenciaDAOImpl();
 		tipoDespesaDao = new TipoDespesaDAOImpl();
 		tipoRendaDao = new TipoRendaDAOImpl();
+		RendasDao = new RendasDAOImpl();
+		DespesasDao = new DespesasDAOImpl();
+		
+		
+		
 		
 		 
-		//Usuario usuario = new Usuario("João", "joaozinhogameplays2@gmail.com", "senha123", "09/12/2003", "/imagens/foto.jpg", "37409689885");		
-		//userDao.inserirUsuario(usuario);
+//		Usuario usuario = new Usuario("João", "joaozinhogameplays2@gmail.com", "senha123", "09/12/2003", "/imagens/foto.jpg", "37409689885");		
+//		userDao.inserirUsuario(usuario);
 		
 //		Usuario user = userDao.buscarUsuarioPorId(6);
 //		System.out.println(user);
@@ -33,16 +46,16 @@ public class main {
 //		Usuario user = userDao.buscarUsuarioPorEmail("joaozinhogameplays@gmail.com");
 //		System.out.println(user);
 		
-//	    List<Usuario> users = userDao.listarTodosUsuarios();
-//	    for (Usuario user : users) {
-//	        System.out.println("ID: " + user.getId());
-//	        System.out.println("Nome: " + user.getNome());
-//	        System.out.println("Email: " + user.getEmail());
-//	        System.out.println("Senha: " + user.getSenha());
-//	        System.out.println("Data de Nascimento: " + user.getDataNascimento());
-//	        System.out.println("Foto: " + user.getFoto());
-//	        System.out.println("CPF: " + user.getCpf());
-//	        System.out.println("----------------------------------");
+//    List<Usuario> users = userDao.listarTodosUsuarios();
+//    for (Usuario user : users) {
+//        System.out.println("ID: " + user.getId());
+//        System.out.println("Nome: " + user.getNome());
+//        System.out.println("Email: " + user.getEmail());
+//        System.out.println("Senha: " + user.getSenha());
+//        System.out.println("Data de Nascimento: " + user.getDataNascimento());
+//        System.out.println("Foto: " + user.getFoto());
+//        System.out.println("CPF: " + user.getCpf());
+//        System.out.println("----------------------------------");
 //	    }
 		
 //		Usuario user = userDao.buscarUsuarioPorId(6);
@@ -142,15 +155,90 @@ public class main {
 //		System.out.println(tipoDespesa);
 		
 			
-//		TipoDespesa tipoDespesa = tipoDespesaDao.buscarTipoDespesaPorId(1);
-//		System.out.println(tipoDespesa);
-//		System.out.println("----------------------------------");
-//		tipoDespesaDao.deletarTipoDespesa(1);
-//		TipoDespesa tipoDespesa1 = tipoDespesaDao.buscarTipoDespesaPorId(1);
-//		System.out.println(tipoDespesa1);
+//	TipoDespesa tipoDespesa = tipoDespesaDao.buscarTipoDespesaPorId(1);
+//	System.out.println(tipoDespesa);
+//	System.out.println("----------------------------------");
+//	tipoDespesaDao.deletarTipoDespesa(1);
+//	TipoDespesa tipoDespesa1 = tipoDespesaDao.buscarTipoDespesaPorId(1);
+//	System.out.println(tipoDespesa1);
 		
 	
-	
-	}
+		//---------------------- RENDAS------------------------------------------------
+		
 
-}
+		        // Inserir uma Renda
+//        Rendas renda = new Rendas(1, 1, 1, 1000.0f, "Renda mensal", Date.valueOf("2023-10-25"));
+//        RendasDao.inserirRendas(renda);
+//        System.out.println("Renda inserida com sucesso.");
+
+		        // Buscar uma Renda por ID
+//		        Rendas rendaBuscada = RendasDao.buscarRendasPorId(1);
+//		        if (rendaBuscada != null) {
+//		            System.out.println("Renda encontrada: " + rendaBuscada);
+//		        } else {
+//		            System.out.println("Renda não encontrada.");
+//		        }
+
+//		        // Listar todas as Rendas
+//		        List<Rendas> todasRendas = RendasDao.listarTodasRendas();
+//		        for (Rendas r : todasRendas) {
+//		            System.out.println("Renda: " + r);
+//		        }
+//
+//		        // Atualizar uma Renda
+//		        Rendas rendaParaAtualizar = RendasDao.buscarRendasPorId(1);
+//		        if (rendaParaAtualizar != null) {
+//		            rendaParaAtualizar.setValor(1200.0f);
+//		            rendaParaAtualizar.setDescricao("Renda atualizada");
+//		            RendasDao.atualizarRendas(rendaParaAtualizar);
+//		            System.out.println("Renda atualizada com sucesso.");
+//		        } else {
+//		            System.out.println("Renda não encontrada para atualizar.");
+//		        }
+//
+//		        // Deletar uma Renda
+//		        int idRendaParaDeletar = 1;
+//		        RendasDao.deletarRendas(idRendaParaDeletar);
+//		        System.out.println("Renda deletada com sucesso.");
+		
+		//---------------------- Despesas------------------------------------------------
+
+		
+        // Inserir uma Despesa
+        Despesas despesa = new Despesas();
+        DespesasDao.inserirDespesa(despesa);
+        System.out.println("Despesa inserida com sucesso.");
+
+//        // Buscar uma Despesa por ID
+//        Despesa despesaBuscada = despesaDAO.buscarDespesaPorId(1);
+//        if (despesaBuscada != null) {
+//            System.out.println("Despesa encontrada: " + despesaBuscada);
+//        } else {
+//            System.out.println("Despesa não encontrada.");
+//        }
+//
+//        // Listar todas as Despesas
+//        List<Despesa> todasDespesas = despesaDAO.listarTodasDespesas();
+//        for (Despesa d : todasDespesas) {
+//            System.out.println("Despesa: " + d);
+//        }
+//
+//        // Atualizar uma Despesa
+//        Despesa despesaParaAtualizar = despesaDAO.buscarDespesaPorId(1);
+//        if (despesaParaAtualizar != null) {
+//            despesaParaAtualizar.setValor(1200.0f);
+//            despesaParaAtualizar.setDescricao("Despesa atualizada");
+//            despesaDAO.atualizarDespesa(despesaParaAtualizar);
+//            System.out.println("Despesa atualizada com sucesso.");
+//        } else {
+//            System.out.println("Despesa não encontrada para atualizar.");
+//        }
+//
+//        // Deletar uma Despesa
+//        int idDespesaParaDeletar = 1;
+//        despesaDAO.deletarDespesa(idDespesaParaDeletar);
+//        System.out.println("Despesa deletada com sucesso.");
+//    }
+//}
+//		    }
+	 }}
