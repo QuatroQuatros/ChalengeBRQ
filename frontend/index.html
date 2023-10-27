@@ -245,11 +245,11 @@
         
         for (let i = 0; i < numeroDeCards; i++) {
             const card = document.createElement('div');
-                card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4');
+                card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4', 'justify-center');
 
                 card.innerHTML = `
                     <span class="">
-                        <img src="assets/imgs/automoveis-cards/${tipoAutomovel}/card-${tipoAutomovel}${i < 10 ? '0' + i : i}.png" class="relative -mt-8 mb-4 rounded-xl" alt="aa">
+                        <img src="assets/imgs/automoveis-cards/${tipoAutomovel}/card-${tipoAutomovel}${i < 10 ? '0' + i : i}.png" class="relative -mt-8 mb-4 rounded-xl" alt="É um(a) ${tipoAutomovel}">
                     </span>
                     <div class="desc-carros text-center text-white py-2">
                         <p class="py-1 px-2 font-normal">
