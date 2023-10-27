@@ -14,6 +14,7 @@
     </head>
 
     <body>
+        <header>
             <nav class="bg-white p-5 md:mx-6 md:p-2 md:flex md:items-center md:justify-between z-[50] w-auto">
                 <div class="cursor-pointer flex justify-between items-center lg:w-1/5">
                     <img src="./assets/imgs/logo.svg" class="mx-4 h-20 lg:h-full lg-w-full" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
@@ -47,8 +48,6 @@
                 </ul>
                 
             </nav>
-        
-        <header>
             <!--Inicio Slide/carousel  -->
             <div class="">
                 <!-- Items -->
@@ -228,7 +227,8 @@
             }
         }       
 
-        function GeraCadsVeiculos(elementoId, caminhoImagem) {   
+
+        function GeraCadsVeiculos(elementoId, tipoAutomovel) {   
         const pai = document.getElementById(elementoId); 
 
         
@@ -245,11 +245,11 @@
         
         for (let i = 0; i < numeroDeCards; i++) {
             const card = document.createElement('div');
-                card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4');
+                card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4', 'justify-center');
 
                 card.innerHTML = `
                     <span class="">
-                        <img src="${caminhoImagem}" class="relative -mt-8 mb-4 rounded-xl" alt="aa">
+                        <img src="assets/imgs/automoveis-cards/${tipoAutomovel}/card-${tipoAutomovel}${i < 10 ? '0' + i : i}.png" class="relative -mt-8 mb-4 rounded-xl" alt="É um(a) ${tipoAutomovel}">
                     </span>
                     <div class="desc-carros text-center text-white py-2">
                         <p class="py-1 px-2 font-normal">
@@ -271,10 +271,10 @@
             }
         }
 
-        GeraCadsVeiculos('listaCarros-horizontal', './assets/imgs/carro-card.png');
-        GeraCadsVeiculos('listaMotos-horizontal', './assets/imgs/moto-card.png');
-        GeraCadsVeiculos('listaVans-horizontal', './assets/imgs/van-card.png');
-        GeraCadsVeiculos('listaCaminhoes-horizontal', './assets/imgs/caminhao-card.png');
+        GeraCadsVeiculos('listaCarros-horizontal', 'carro');
+        GeraCadsVeiculos('listaMotos-horizontal', 'moto');
+        GeraCadsVeiculos('listaVans-horizontal', 'van');
+        GeraCadsVeiculos('listaCaminhoes-horizontal', 'caminhao');
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
