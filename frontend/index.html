@@ -15,16 +15,11 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
 
-  <body>
-    <nav
-      class="bg-white p-5 md:mx-6 md:p-2 md:flex md:items-center md:justify-between z-[50] w-auto"
-    >
-      <div class="cursor-pointer flex justify-between items-center lg:w-1/5">
-        <img
-          src="./assets/imgs/logo.svg"
-          class="h-20 lg:h-full lg-w-full"
-          alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta."
-        />
+    <body>
+        <header>
+            <nav class="bg-white p-5 md:mx-6 md:p-2 md:flex md:items-center md:justify-between z-[50] w-auto">
+                <div class="cursor-pointer flex justify-between items-center lg:w-1/5">
+                    <img src="./assets/imgs/logo.svg" class="mx-4 h-20 lg:h-full lg-w-full" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
 
         <i
           id="menu"
@@ -358,9 +353,9 @@
       }
     }
 
-    function GeraCadsVeiculos(elementoId, caminhoImagem) {
+    function GeraCadsVeiculos(elementoId, secao, dadosJSON) {
       const pai = document.getElementById(elementoId);
-
+    
       if (largura <= 425) {
         numeroDeCards = 1;
       } else if (largura <= 768) {
@@ -368,51 +363,154 @@
       } else if (largura <= 1024) {
         numeroDeCards = 4;
       } else {
-        var numeroDeCards = 5;
+        numeroDeCards = 5;
       }
-
-      for (let i = 0; i < numeroDeCards; i++) {
-        const card = document.createElement("div");
-        card.classList.add(
-          "bg-[#324256]",
-          "w-48",
-          "h-64",
-          "rounded-xl",
-          "mx-4"
-        );
-
-        card.innerHTML = `
-                    <span class="">
-                        <img src="${caminhoImagem}" class="relative -mt-8 mb-4 rounded-xl" alt="aa">
-                    </span>
-                    <div class="desc-carros text-center text-white py-2">
-                        <p class="py-1 px-2 font-normal">
-                            Modelo Z2K
-                        </p>
-                        <h3 class="font-bold py-1 px-2">
-                            VEÍCULO NOME
-                        </h3>
-                        <p>
-                            R$ 580,00 /DIA
-                        </p>
-                        <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
-                            Reservar
-                        </button>
-                    </div>
-                `;
-
-        pai.appendChild(card);
+    
+      const veiculos = dadosJSON[secao];
+      console.log(veiculos);
+    
+      for (const chaveVeiculo in veiculos) {
+        if (veiculos.hasOwnProperty(chaveVeiculo)) {
+          const carro = veiculos[chaveVeiculo];
+    
+          const card = document.createElement('div');
+          card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4', 'justify-center');
+    
+          card.innerHTML = `
+            <span class="">
+              <img src="${carro.foto}" class="relative -mt-8 mb-4 rounded-xl" alt="É um(a) ${carro.nome}">
+            </span>
+            <div class="desc-carros text-center text-white py-2">
+              <p class="py-1 px-2 font-normal">
+                ANO: ${carro.ano}
+              </p>
+              <h3 class="font-bold py-1 px-2">
+                ${carro.nome}
+              </h3>
+              <p>
+                R$ ${carro.preço} /DIA
+              </p>
+              <a href="${carro.link}" class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                Reservar
+              </a>
+            </div>
+          `;
+    
+          pai.appendChild(card);
+        }
       }
     }
+    
+    // Exemplo de uso:
+    const dadosJSON = {
+      "Carros": {
+        "toyota-RAV4": {
+          "ano": 2022,
+          "nome": "Toyota RAV4",
+          "foto": "./assets/imgs/Carros/toyotaRAV4/toyota-RAV4(Hero).png",
+          "preço": "4444.00",
+          "link": "./pages/carros/toyotaRV4.html"
+        },
+        "jeep-renegade": {
+          "ano": 2019,
+          "nome": "Jeep Renegade",
+          "foto": "./assets/imgs/Carros/jeepRenegade/hero.webp",
+          "preço": "4444.00",
+          "link": "./pages/carros/jeepRenegade.html"
+        },
+        "bmw-x5": {
+          "ano": 2019,
+          "nome": "BMW X5",
+          "foto": "./assets/imgs/Carros/bmwX5/bmw-x5(Hero).png",
+          "preço": "4444.00",
+          "link": "./pages/carros/bmwX5.html"
+        },
+        "nissan-rouge": {
+          "ano": 2019,
+          "nome": "Nissan Rouge",
+          "foto": "./assets/imgs/Carros/nissanRouge/nissan-rouge(Hero).png",
+          "preço": "4444.00",
+          "link": "./pages/carros/nissanRouge.html"
+        },
+        "volvo-XC60-Inscription":{
+          "ano": 2020,
+          "nome": "Volvo XC60 Inscription",
+          "foto": "./assets/imgs/Carros/volvoXC60Inscription/volvo-XC60-Inscription(Hero).png",
+          "preço": "4444.00",
+          "link": "./pages/carros/volvo-XC60-Inscription.html"
 
-    GeraCadsVeiculos("listaCarros-horizontal", "./assets/imgs/carro-card.png");
-    GeraCadsVeiculos("listaMotos-horizontal", "./assets/imgs/moto-card.png");
-    GeraCadsVeiculos("listaVans-horizontal", "./assets/imgs/van-card.png");
-    GeraCadsVeiculos(
-      "listaCaminhoes-horizontal",
-      "./assets/imgs/caminhao-card.png"
-    );
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+        }
+
+      },
+      "Motos": {
+        "Factor 125i UBS": {
+          "ano": 2023,
+          "nome": "Factor 125i UBS",
+          "foto": "./assets/imgs/Motos/factor-125i-ubs/factor-125i-ubs(Hero).png",
+          "preço": "4444.00",
+          "link": "/pages/motos/factor-125i-ubs.html"
+
+          
+        },
+        "MV Agusta Rush 1000": {
+          "ano": 2019,
+          "nome": "Agusta Rush 1000",
+          "foto": "../foto.jpg",
+          "preço": "7000",
+          "link": "/pages/jeep-renegade.html"
+        }
+      },
+
+      "Vans": {
+        "biz": {
+          "ano": 2019,
+          "nome": "Biz",
+          "foto": "url-para-a-foto",
+          "preço": "4444.00",
+          "link": "/pages/biz.html"
+        },
+        "MV Agusta Rush 1000": {
+          "ano": 2019,
+          "nome": "Agusta Rush 1000",
+          "foto": "../foto.jpg",
+          "preço": "7000",
+          "link": "/pages/jeep-renegade.html"
+        }
+      },
+
+      "Caminhões": {
+        "biz": {
+          "ano": 2019,
+          "nome": "Biz",
+          "foto": "url-para-a-foto",
+          "preço": "4444.00",
+          "link": "/pages/biz.html"
+        },
+        "MV Agusta Rush 1000": {
+          "ano": 2019,
+          "nome": "Agusta Rush 1000",
+          "foto": "../foto.jpg",
+          "preço": "7000",
+          "link": "/pages/jeep-renegade.html"
+        }
+      }
+
+      
+    };
+    
+  
+    
+  
+        GeraCadsVeiculos('listaCarros-horizontal', 'Carros', dadosJSON);
+        GeraCadsVeiculos('listaMotos-horizontal', 'Motos', dadosJSON);
+        GeraCadsVeiculos('listaVans-horizontal', 'Vans', dadosJSON);
+        GeraCadsVeiculos('listaCaminhoes-horizontal', 'Caminhões', dadosJSON);
+        //GeraCadsVeiculos('listaCarros-horizontal', 'carro');
+        //GeraCadsVeiculos('listaMotos-horizontal', 'moto');
+       //GeraCadsVeiculos('listaVans-horizontal', 'van');
+        //GeraCadsVeiculos('listaCaminhoes-horizontal', 'caminhao');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    
 </html>
