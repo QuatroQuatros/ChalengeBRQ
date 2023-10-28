@@ -205,9 +205,16 @@ public class main {
 
 		
         // Inserir uma Despesa
-        Despesas despesa = new Despesas();
-        DespesasDao.inserirDespesa(despesa);
-        System.out.println("Despesa inserida com sucesso.");
+		Despesas despesa = new Despesas();
+		despesa.setDescricao("Compra de material de escritório");
+		despesa.setValor(100.0);  // Valor fictício
+		despesa.setData("2023-10-26");  // Data fictícia no formato "yyyy-MM-dd"
+
+		// Em seguida, você pode chamar o método para inserir a despesa no banco de dados, supondo que DespesasDao esteja corretamente implementado.
+		DespesasDao.inserirDespesa(despesa);
+
+		System.out.println("Despesa inserida com sucesso.");
+
 
 //        // Buscar uma Despesa por ID
 //        Despesa despesaBuscada = despesaDAO.buscarDespesaPorId(1);

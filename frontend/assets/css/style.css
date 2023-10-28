@@ -24,3 +24,8 @@
 .poppins-txt {
   font-family: "Poppins", sans-serif;
 }
+
+/* #listaCaminhoes-horizontal {
+  overflow-x: hidden;
+  white-space: nowrap; Impede a quebra de linha dos elementos internos 
+} */
