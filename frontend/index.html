@@ -1,255 +1,743 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <script src="https://cdn.tailwindcss.com%22%3E/"></script>
-        <script src="https://kit.fontawesome.com/cadf9f67ef.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script
+      src="https://kit.fontawesome.com/cadf9f67ef.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <title>EasyCarros</title>
+    <title>EasyCarros</title>
 
-        <link rel="stylesheet" href="../assets/css/style.css">
-    </head>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
     <body>
+        <header>
             <nav class="bg-white p-5 md:mx-6 md:p-2 md:flex md:items-center md:justify-between z-[50] w-auto">
                 <div class="cursor-pointer flex justify-between items-center lg:w-1/5">
                     <img src="./assets/imgs/logo.svg" class="mx-4 h-20 lg:h-full lg-w-full" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
 
-                    <i id="menu" class="fa-solid fa-bars fa-xl text-3x1 cursor-pointer mx-2 md:hidden block" onclick="ToggleMenu(this);"></i>
+        <i
+          id="menu"
+          class="fa-solid fa-bars fa-xl text-3x1 cursor-pointer mx-2 md:hidden block"
+          onclick="ToggleMenu(this);"
+        ></i>
+      </div>
 
+      <ul
+        class="poppins-txt md:flex md:justify-between md:items-center z-[49] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+      >
+        <li class="mx-3 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
+          <a href="#">Comprar</a>
+        </li>
+        <li class="mx-3 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
+          <a href="#">Vender</a>
+        </li>
+        <li class="mx-3 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
+          <a href="#">Alugar</a>
+        </li>
+        <li class="mx-3 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
+          <a href="#">Saiba Mais</a>
+        </li>
+        <li class="mx-3 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
+          <a href="#">Sobre nós</a>
+        </li>
+
+        <div
+          class="mx-2 my-6 md:my-0 md:ml-[8rem] flex flex-row items-center cursor-pointer"
+        >
+          <i class="fa-solid fa-user fa-xl"></i>
+          <a href="./pages/TelaLogin.html" class="texto-login pl-2">Entrar</a>
+        </div>
+      </ul>
+    </nav>
+
+    <header>
+      <!--Inicio Slide/carousel  -->
+      <div class="">
+        <!-- Items -->
+        <div id="default-carousel" class="relative" data-carousel="static">
+          <div class="overflow-hidden relative h-48 sm:h-64 xl:h-80 2xl:h-96">
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <span
+                class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl"
+                >Primer Slide</span
+              >
+              <img
+                src="./assets/imgs/anuncio-easy-carros.png"
+                class="block absolute top-1/2 left-1/2 h-full md:h-auto w-full -translate-x-1/2 -translate-y-1/2"
+                alt="..."
+              />
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="./assets/imgs/doisCarros.jpg"
+                class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- Bolinhas -->
+          <div
+            class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2"
+          >
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"
+            ></button>
+          </div>
+          <!-- Controladores setinhas -->
+          <button
+            type="button"
+            class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+            data-carousel-prev
+          >
+            <span
+              class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
+            >
+              <svg
+                class="w-5 h-5 text-white sm:w-6 sm:h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span class="hidden">Anterior</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+            data-carousel-next
+          >
+            <span
+              class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
+            >
+              <svg
+                class="w-5 h-5 text-white sm:w-6 sm:h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+              <span class="hidden">Proximo</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <!-- Fim slides/carousel -->
+    </header>
+
+    <main class="">
+      <h1 class="my-5 poppins-h1 flex justify-center">ALUGUE UM CARRO</h1>
+      <article>
+        <section>
+          <h1 class="txt-black my-2 ml-6 font-bold">Categoria dos veículos</h1>
+          <div class="w-auto flex flex-col-reverse md:flex-row justify-around">
+            <div class="filtros md:w-2/3">
+              <div
+                class="p-2 flex flex-inline justify-between md:justify-around"
+              >
+                <img
+                  class="sm:pt-2 sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6"
+                  style="cursor: pointer"
+                  src="./assets/imgs/Group_1.svg"
+                  alt=""
+                />
+                <img
+                  class="sm:pt-2 sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6"
+                  style="cursor: pointer"
+                  src="./assets/imgs/Group_2.svg"
+                  alt=""
+                />
+                <img
+                  class="sm:pt-2 sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6"
+                  style="cursor: pointer"
+                  src="./assets/imgs/Group_3.svg"
+                  alt=""
+                />
+                <img
+                  class="sm:pt-2 sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6"
+                  style="cursor: pointer"
+                  src="./assets/imgs/Group_4.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="px-6 sm:ps-6 flex flex-col items-center md:items-start w-full"
+              >
+                <div class="py-6 inputs flex flex-col lg:flex-row w-full">
+                  <div class="md:ps-6 flex flex-col">
+                    <label for="">Local de Retirada</label>
+                    <input
+                      class="bg-gray-200 p-2 rounded-lg"
+                      type="text"
+                      placeholder="Onde você quer alugar?"
+                    />
+                  </div>
+                  <div class="md:ps-6 flex flex-col">
+                    <label for="">Data e Hora de Retirada</label>
+                    <input class="bg-gray-200 p-2 rounded-lg" type="date" />
+                  </div>
+                  <div class="md:ps-6 flex flex-col">
+                    <label for="">Data e Hora de Devolução</label>
+                    <input class="bg-gray-200 p-2 rounded-lg" type="date" />
+                  </div>
                 </div>
+                <div class="py-6 md:px-6 flex flex-col w-full">
+                  <label for=""
+                    >Buscar por uma marca, modelo ou tipo de veículo</label
+                  >
+                  <div class="flex flex-row">
+                    <input
+                      class="bg-gray-200 h-20 p-2 rounded-l-lg w-full"
+                      type="text"
+                      placeholder="Digite a marca, modelo ou tipo do automóvel"
+                    />
+                    <button class="bg-teal-700 rounded-r-lg w-1/2">
+                      VER OFERTAS (423)
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                <ul class="poppins-txt md:flex md:justify-between md:items-center z-[49] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 lg:w-4/5">
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
-                        <a href="#">Comprar</a>
-                    </li>
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
-                        <a href="#">Vender</a>
-                        
-                    </li>
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
-                        <a href="#">Alugar</a>
-                    </li>
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
-                        <a href="#">Saiba Mais</a>
-                    </li>
-                    <li class="mx-4 my-6 md:mx-12 md:my-0 hover:text-sky-900 duration-500">
-                        <a href="#">Sobre nós</a>
-                    </li>
- 
-                    <div class="mx-4 my-6 md:my-0 md:ml-[8rem] flex flex-row items-center cursor-pointer">
-                        <i class="fa-solid fa-user fa-xl"></i>
-                        <a href="./pages/TelaLogin.html" class="texto-login pl-2">Entrar</a>                   
-                    </div>
-                </ul>
-                
-            </nav>
-        
-        <header>
-            <!--Inicio Slide/carousel  -->
-            <div class="">
-                <!-- Items -->
-                <div id="default-carousel" class="relative" data-carousel="static">
-                    <div class="overflow-hidden relative h-48 sm:h-64 xl:h-80 2xl:h-96">
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl ">Primer Slide</span>
-                            <img src="./assets/imgs/anuncio-easy-carros.png" class="block absolute top-1/2 left-1/2 h-full md:h-auto w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                        </div>
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="./assets/imgs/doisCarros.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                        </div>
-                    </div>
-                    <!-- Bolinhas -->
-                    <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                    </div>
-                <!-- Controladores setinhas -->
-                    <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                        <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
-                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                            <span class="hidden">Anterior</span>
-                        </span>
-                    </button>
-                    <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                        <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
-                            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            <span class="hidden">Proximo</span>
-                        </span>
-                    </button>
+            <div
+              class="flex p-2 sm:pe-4 md:pe-6 h-36 md:h-auto w-full sm:justify-center md:w-2/4 lg:w-1/3 sm:justify-center sm:align-center"
+            >
+              <img
+                class="h-full w-full items-center rounded-s object-cover"
+                src="./assets/imgs/googlemaps-bg.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+        <section>
+          <div id="">
+            <h1 class="txt-black my-2 ml-6 font-bold">Carros</h1>
+            <div class="w-auto my-12 flex justify-between items-center">
+              <div class="ml-3 cursor-pointer">
+                <i class="fa-solid fa-chevron-left"></i>
+              </div>
+              <div
+                class="mx-6 flex flex-row items-center"
+                id="listaCarros-horizontal"
+              ></div>
+              <div class="mr-3 cursor-pointer">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+          <div id="">
+            <h1 class="txt-black my-2 ml-6 font-bold">Motos</h1>
+            <div class="w-full my-12 flex justify-between items-center">
+              <div class="ml-3 cursor-pointer">
+                <i class="fa-solid fa-chevron-left"></i>
+              </div>
+              <div
+                class="mx-6 flex flex-row items-center"
+                id="listaMotos-horizontal"
+              ></div>
+              <div class="mr-3 cursor-pointer">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+          <div id="">
+            <h1 class="txt-black my-2 ml-6 font-bold">Vans</h1>
+            <div class="w-full my-12 flex justify-between items-center">
+              <div class="ml-3 cursor-pointer">
+                <i class="fa-solid fa-chevron-left"></i>
+              </div>
+              <div class="mx-6 flex flex-row items-center" id="listaVans-horizontal">
+                <div class="bg-[#324256] w-48 h-64 rounded-xl mx-4 justify-center">
+                  <span class="">
+                    <img src="./assets/imgs/automoveis-cards/van/card-van00.png" class="relative -mt-8 mb-4 rounded-xl" alt="É uma van">
+                  </span>
+                  <div class="desc-carros text-center text-white py-2">
+                      <p class="py-1 px-2 font-normal">
+                          Modelo Z2K
+                      </p>
+                      <h3 class="font-bold py-1 px-2">
+                          VEÍCULO NOME
+                      </h3>
+                      <p>
+                          R$ 580,00 /DIA
+                      </p>
+                      <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                          Reservar
+                      </button>
+                  </div>
+                </div>
+                <div class="bg-[#324256] w-48 h-64 rounded-xl mx-4 justify-center">
+                  <span class="">
+                    <img src="./assets/imgs/automoveis-cards/van/card-van00.png" class="relative -mt-8 mb-4 rounded-xl" alt="É uma van">
+                  </span>
+                  <div class="desc-carros text-center text-white py-2">
+                      <p class="py-1 px-2 font-normal">
+                          Modelo Z2K
+                      </p>
+                      <h3 class="font-bold py-1 px-2">
+                          VEÍCULO NOME
+                      </h3>
+                      <p>
+                          R$ 580,00 /DIA
+                      </p>
+                      <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                          Reservar
+                      </button>
+                  </div>
+                </div>
+                <div class="bg-[#324256] w-48 h-64 rounded-xl mx-4 justify-center">
+                  <span class="">
+                    <img src="./assets/imgs/automoveis-cards/van/card-van00.png" class="relative -mt-8 mb-4 rounded-xl" alt="É uma van">
+                  </span>
+                  <div class="desc-carros text-center text-white py-2">
+                      <p class="py-1 px-2 font-normal">
+                          Modelo Z2K
+                      </p>
+                      <h3 class="font-bold py-1 px-2">
+                          VEÍCULO NOME
+                      </h3>
+                      <p>
+                          R$ 580,00 /DIA
+                      </p>
+                      <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                          Reservar
+                      </button>
+                  </div>
+                </div>
+                <div class="bg-[#324256] w-48 h-64 rounded-xl mx-4 justify-center">
+                  <span class="">
+                    <img src="./assets/imgs/automoveis-cards/van/card-van00.png" class="relative -mt-8 mb-4 rounded-xl" alt="É uma van">
+                  </span>
+                  <div class="desc-carros text-center text-white py-2">
+                      <p class="py-1 px-2 font-normal">
+                          Modelo Z2K
+                      </p>
+                      <h3 class="font-bold py-1 px-2">
+                          VEÍCULO NOME
+                      </h3>
+                      <p>
+                          R$ 580,00 /DIA
+                      </p>
+                      <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                          Reservar
+                      </button>
+                  </div>
+                </div>
+                <div class="bg-[#324256] w-48 h-64 rounded-xl mx-4 justify-center">
+                  <span class="">
+                    <img src="./assets/imgs/automoveis-cards/van/card-van00.png" class="relative -mt-8 mb-4 rounded-xl" alt="É uma van">
+                  </span>
+                  <div class="desc-carros text-center text-white py-2">
+                      <p class="py-1 px-2 font-normal">
+                          Modelo Z2K
+                      </p>
+                      <h3 class="font-bold py-1 px-2">
+                          VEÍCULO NOME
+                      </h3>
+                      <p>
+                          R$ 580,00 /DIA
+                      </p>
+                      <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                          Reservar
+                      </button>
+                  </div>
                 </div>
             </div>
-            <!-- Fim slides/carousel -->
-        </header>
-
-        <main class="">
-            <h1 class="my-5 poppins-h1 flex justify-center">ALUGUE UM CARRO</h1>
-            <article>
-                <section>
-                    <h1 class="txt-black my-2 ml-6 font-bold">Categoria dos veículos</h1>
-                    <div class="w-auto flex flex-col-reverse md:flex-row justify-around">
-                        <div class="filtros md:w-2/3">
-                            <div class="p-2 flex flex-inline justify-between md:justify-around">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" style="cursor:pointer;" src="./assets/imgs/Group_1.svg" alt="">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" style="cursor:pointer;" src="./assets/imgs/Group_2.svg" alt="">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" style="cursor:pointer;" src="./assets/imgs/Group_3.svg" alt="">
-                                <img class="sm:pt-2  sm:items-start md:items-center w-1/4 sm:w-1/5 lg:w-1/6" style="cursor:pointer;" src="./assets/imgs/Group_4.svg" alt="">
-                            </div>
-                            <div class="px-6 sm:ps-6 flex flex-col items-center md:items-start w-full">
-                                <div class="py-6 inputs flex flex-col lg:flex-row w-full">
-                                    <div class="md:ps-6 flex flex-col">
-                                        <label for="">Local de Retirada</label>
-                                        <input class="bg-gray-200 p-2 rounded-lg" type="text" placeholder="Onde você quer alugar?">
-                                    </div>
-                                    <div class="md:ps-6 flex flex-col">
-                                        <label for="">Data e Hora de Retirada</label>
-                                        <input class="bg-gray-200 p-2 rounded-lg" type="date">
-                                    </div>
-                                    <div class="md:ps-6 flex flex-col">
-                                        <label for="">Data e Hora de Devolução</label>
-                                        <input class="bg-gray-200 p-2 rounded-lg" type="date">
-                                    </div>
-                                </div>
-                                <div class="py-6 md:px-6 flex flex-col w-full">
-                                    <label for="">Buscar por uma marca, modelo ou tipo de veículo</label>
-                                    <div class="flex flex-row">
-                                        <input class="bg-gray-200 h-20 p-2 rounded-l-lg w-full" type="text" placeholder="Digite a marca, modelo ou tipo do automóvel">
-                                        <button class="bg-teal-700 rounded-r-lg w-1/2">VER OFERTAS (423)</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex p-2 sm:pe-4 md:pe-6 h-36 md:h-auto w-full sm:justify-center md:w-2/4 lg:w-1/3 sm:justify-center sm:align-center">
-                            <img class="h-full w-full items-center rounded-s object-cover" src="./assets/imgs/googlemaps-bg.png" alt="">
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div id="">
-                        <h1 class="txt-black my-2 ml-6 font-bold ">Carros</h1>
-                        <div class="w-auto my-12 flex justify-between items-center">
-                            <div class="ml-3 cursor-pointer">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                            <div class="mx-6 flex flex-row items-center" id="listaCarros-horizontal"></div>
-                            <div class="mr-3 cursor-pointer">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="">
-                        <h1 class="txt-black my-2 ml-6 font-bold ">Motos</h1>
-                        <div class="w-full my-12 flex justify-between items-center">
-                            <div class="ml-3 cursor-pointer">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                            <div class="mx-6 flex flex-row items-center" id="listaMotos-horizontal">
-                            </div>
-                            <div class="mr-3 cursor-pointer">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="">
-                        <h1 class="txt-black my-2 ml-6 font-bold ">Vans</h1>
-                        <div class="w-full my-12 flex justify-between items-center">
-                            <div class="ml-3 cursor-pointer">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                            <div class="mx-6 flex flex-row items-center" id="listaVans-horizontal">
-                            </div>
-                            <div class="mr-3 cursor-pointer">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="">
-                        <h1 class="txt-black my-2 ml-6 font-bold ">Caminhões</h1>
-                        <div class="w-full my-12 flex justify-between items-center">
-                            <div class="ml-3 cursor-pointer">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                            <div class="mx-6 flex flex-row items-center" id="listaCaminhoes-horizontal">
-                            </div>
-                            <div class="mr-3 cursor-pointer">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </article>
-               
-        </main>
-
-        <footer class="mt-2 h-20 sm:h-28 flex items-center justify-around bg-[#71ada8]">
-            <div class="logo-empresa">
-                <img src="./assets/imgs/logo.svg" class="h-20" alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta.">
+              <div class="mr-3 cursor-pointer">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
             </div>
+          </div>
+          <div id="">
+            <h1 class="txt-black my-2 ml-6 font-bold">Caminhões</h1>
+            <div class="w-full my-12 flex justify-between items-center">
+              <div class="ml-3 cursor-pointer">
+                <i class="fa-solid fa-chevron-left"></i>
+              </div>
+              <div
+                class="mx-6 flex flex-row items-center"
+                id="listaCaminhoes-horizontal"
+              >
 
-            <ul class="flex justify-between text-xs sm:text-lg">
-                <li><p>Copyright BatataCars &copy; 2023 </p></li>
-                <!-- <li class="mx-1 sm:mx-4 hover:text-sky-900 duration-500">Comprar</li>
+              <div class="bg-[#324256] w-48 h-64 rounded-xl mx-4 justify-center">
+                <span class="">
+                  <img src="./assets/imgs/automoveis-cards/caminhao/card-caminhao00.png" class="relative -mt-8 mb-4 rounded-xl" alt="É uma van">
+                </span>
+                <div class="desc-carros text-center text-white py-2">
+                    <p class="py-1 px-2 font-normal">
+                        Modelo Z2K
+                    </p>
+                    <h3 class="font-bold py-1 px-2">
+                        VEÍCULO NOME
+                    </h3>
+                    <p>
+                        R$ 580,00 /DIA
+                    </p>
+                    <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                        Reservar
+                    </button>
+                </div>
+              </div>
+              <div class="bg-[#324256] w-48 h-64 rounded-xl mx-4 justify-center">
+                <span class="">
+                  <img src="./assets/imgs/automoveis-cards/caminhao/card-caminhao00.png" class="relative -mt-8 mb-4 rounded-xl" alt="É uma van">
+                </span>
+                <div class="desc-carros text-center text-white py-2">
+                    <p class="py-1 px-2 font-normal">
+                        Modelo Z2K
+                    </p>
+                    <h3 class="font-bold py-1 px-2">
+                        VEÍCULO NOME
+                    </h3>
+                    <p>
+                        R$ 580,00 /DIA
+                    </p>
+                    <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                        Reservar
+                    </button>
+                </div>
+              </div>
+              <div class="bg-[#324256] w-48 h-64 rounded-xl mx-4 justify-center">
+                <span class="">
+                  <img src="./assets/imgs/automoveis-cards/caminhao/card-caminhao00.png" class="relative -mt-8 mb-4 rounded-xl" alt="É uma van">
+                </span>
+                <div class="desc-carros text-center text-white py-2">
+                    <p class="py-1 px-2 font-normal">
+                        Modelo Z2K
+                    </p>
+                    <h3 class="font-bold py-1 px-2">
+                        VEÍCULO NOME
+                    </h3>
+                    <p>
+                        R$ 580,00 /DIA
+                    </p>
+                    <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                        Reservar
+                    </button>
+                </div>
+              </div>
+              <div class="bg-[#324256] w-48 h-64 rounded-xl mx-4 justify-center">
+                <span class="">
+                  <img src="./assets/imgs/automoveis-cards/caminhao/card-caminhao00.png" class="relative -mt-8 mb-4 rounded-xl" alt="É uma van">
+                </span>
+                <div class="desc-carros text-center text-white py-2">
+                    <p class="py-1 px-2 font-normal">
+                        Modelo Z2K
+                    </p>
+                    <h3 class="font-bold py-1 px-2">
+                        VEÍCULO NOME
+                    </h3>
+                    <p>
+                        R$ 580,00 /DIA
+                    </p>
+                    <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                        Reservar
+                    </button>
+                </div>
+              </div>
+              <div class="bg-[#324256] w-48 h-64 rounded-xl mx-4 justify-center">
+                <span class="">
+                  <img src="./assets/imgs/automoveis-cards/caminhao/card-caminhao00.png" class="relative -mt-8 mb-4 rounded-xl" alt="É uma van">
+                </span>
+                <div class="desc-carros text-center text-white py-2">
+                    <p class="py-1 px-2 font-normal">
+                        Modelo Z2K
+                    </p>
+                    <h3 class="font-bold py-1 px-2">
+                        VEÍCULO NOME
+                    </h3>
+                    <p>
+                        R$ 580,00 /DIA
+                    </p>
+                    <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                        Reservar
+                    </button>
+                </div>
+              </div>
+            
+            </div>
+              <div class="mr-3 cursor-pointer">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer
+      class="mt-2 h-20 sm:h-28 flex items-center justify-around bg-[#71ada8]"
+    >
+      <div class="logo-empresa">
+        <img
+          src="./assets/imgs/logo.svg"
+          class="h-20"
+          alt="A logo da empresa é um círculo branco com 'Easy carros' alinhados ao centro. Sua borda possue duas cores, sendo a metade de cima azul e a de baixo, preta."
+        />
+      </div>
+
+      <ul class="flex justify-between text-xs sm:text-lg">
+        <li><p>Copyright BatataCars &copy; 2023</p></li>
+        <!-- <li class="mx-1 sm:mx-4 hover:text-sky-900 duration-500">Comprar</li>
                 <li class="mx-1 sm:mx-4 hover:text-sky-900 duration-500">Vender</li>
                 <li class="mx-1 sm:mx-4 hover:text-sky-900 duration-500">Alugar</li>
                 <li class="mx-1 sm:mx-4 hover:text-sky-900 duration-500">Saiba Mais</li>
                 <li class="mx-1 sm:mx-4 hover:text-sky-900 duration-500">Sobre nós</li> -->
-            </ul>
+      </ul>
 
-            <div class="w-18 sm:w-36">
-                <img src="./assets/imgs/carros_footer.svg" alt="Carros juntos">
+      <div class="w-18 sm:w-36">
+        <img src="./assets/imgs/carros_footer.svg" alt="Carros juntos" />
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    $ = document.querySelector.bind(document);
+    $$ = document.querySelectorAll.bind(document);
+
+    let largura = "body";
+
+    largura = $(largura).clientWidth;
+
+    function ToggleMenu(elemento) {
+      let list = document.querySelector("ul");
+      if (list.classList.contains("top-[120px]")) {
+        list.classList.remove("top-[120px]");
+        elemento.classList.toggle("fa-x");
+      } else {
+        list.classList.remove("Z-[49]");
+        elemento.classList.toggle("fa-x"),
+          list.classList.add("top-[120px]"),
+          list.classList.add("opacity-100");
+      }
+    }
+
+    function GeraCadsVeiculos(elementoId, secao, dadosJSON) {
+      const pai = document.getElementById(elementoId);
+    
+      if (largura <= 425) {
+        numeroDeCards = 1;
+      } else if (largura <= 768) {
+        numeroDeCards = 3;
+      } else if (largura <= 1024) {
+        numeroDeCards = 4;
+      } else {
+        numeroDeCards = 5;
+      }
+    
+      const veiculos = dadosJSON[secao];
+      console.log(veiculos);
+    
+      for (const chaveVeiculo in veiculos) {
+        if (veiculos.hasOwnProperty(chaveVeiculo)) {
+          const carro = veiculos[chaveVeiculo];
+    
+          const card = document.createElement('div');
+          card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4', 'justify-center');
+    
+          card.innerHTML = `
+            <span class="">
+              <img src="${carro.foto}" class="relative -mt-8 mb-4 rounded-xl" alt="É um(a) ${carro.nome}">
+            </span>
+            <div class="desc-carros text-center text-white py-2">
+              <p class="py-1 px-2 font-normal">
+                ANO: ${carro.ano}
+              </p>
+              <h3 class="font-bold py-1 px-2">
+                ${carro.nome}
+              </h3>
+              <p>
+                R$ ${carro.preço} /DIA
+              </p>
+              <a href="${carro.link}" class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
+                Reservar
+              </a>
             </div>
-        </footer>
-        
-    </body>
-
-    <script>
-        $ = document.querySelector.bind(document); 
-        $$ = document.querySelectorAll.bind(document); 
-
-        let largura = 'body';
-
-        largura = $(largura).clientWidth;
-
-
-        function ToggleMenu(elemento) {
-            let list = document.querySelector('ul');
-            if (list.classList.contains('top-[120px]')) {
-                list.classList.remove('top-[120px]')
-                elemento.classList.toggle('fa-x')
-            }else{
-                list.classList.remove('Z-[49]')
-                elemento.classList.toggle("fa-x"), 
-                list.classList.add('top-[120px]'), 
-                list.classList.add('opacity-100');
-            }
-        }       
-
-        function GeraCadsVeiculos(elementoId, caminhoImagem) {   
-        const pai = document.getElementById(elementoId); 
-
-        
-        if(largura <= 425){
-            numeroDeCards = 1;
-            
-        }else if(largura <= 768){
-            numeroDeCards = 3;
-        }else if(largura <= 1024){
-            numeroDeCards = 4;
-        }else{
-            var numeroDeCards = 5;
+          `;
+    
+          pai.appendChild(card);
         }
-        
-        for (let i = 0; i < numeroDeCards; i++) {
-            const card = document.createElement('div');
-                card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4');
+      }
+    }
+    
+    // Exemplo de uso:
+    const dadosJSON = {
+      "Carros": {
+        "toyota-RAV4": {
+          "ano": 2022,
+          "nome": "Toyota RAV4",
+          "foto": "./assets/imgs/Carros/toyotaRAV4/toyota-RAV4(Hero).png",
+          "preço": "4444.00",
+          "link": "./pages/carros/toyotaRV4.html"
+        },
+        "jeep-renegade": {
+          "ano": 2019,
+          "nome": "Jeep Renegade",
+          "foto": "./assets/imgs/Carros/jeepRenegade/hero.webp",
+          "preço": "4444.00",
+          "link": "./pages/carros/jeepRenegade.html"
+        },
+        "bmw-x5": {
+          "ano": 2019,
+          "nome": "BMW X5",
+          "foto": "./assets/imgs/Carros/bmwX5/bmw-x5(Hero).png",
+          "preço": "4444.00",
+          "link": "./pages/carros/bmwX5.html"
+        },
+        "nissan-rouge": {
+          "ano": 2019,
+          "nome": "Nissan Rouge",
+          "foto": "./assets/imgs/Carros/nissanRouge/nissan-rouge(Hero).png",
+          "preço": "4444.00",
+          "link": "./pages/carros/nissanRouge.html"
+        },
+        "volvo-XC60-Inscription":{
+          "ano": 2020,
+          "nome": "Volvo XC60 Inscription",
+          "foto": "./assets/imgs/Carros/volvoXC60Inscription/volvo-XC60-Inscription(Hero).png",
+          "preço": "4444.00",
+          "link": "./pages/carros/volvo-XC60-Inscription.html"
 
-                card.innerHTML = `
+        }
+
+      },
+      "Motos": {
+        "Factor 125i UBS": {
+          "ano": 2023,
+          "nome": "Factor 125i UBS",
+          "foto": "./assets/imgs/Motos/factor-125i-ubs/factor-125i-ubs(Hero).png",
+          "preço": "4444.00",
+          "link": "/pages/motos/factor-125i-ubs.html"
+
+          
+        },
+        "MT-03-ABS": {
+          "ano": 2024,
+          "nome": "MT-03-ABS",
+          "foto": "./assets/imgs/Motos/MT-03-ABS-2024/mt-03abs(Hero).png",
+          "preço": "7000",
+          "link": "/pages/motos/mt-03ABS.html"
+        },
+        "NMAX CONNECTED 160 ABS SE":{
+          "ano": 2023,
+          "nome": "NMAX CONNECTED 160 ABS SE",
+          "foto": "./assets/imgs/Motos/NMAX-CONNECTED-160-ABS-SE-2023/nmaxConected160abs(Hero).png",
+          "preço": "7000",
+          "link": "/pages/motos/nmaxConected160abs.html"
+        },
+
+        "R3-ABS":{
+          "ano": 2024,
+          "nome": "R3 ABS",
+          "foto": "./assets/imgs/Motos/R3-ABS-2024/r3abs(Hero).png",
+          "preço": "7000",
+          "link": "/pages/motos/r3abs.html"
+        },
+        "TT-R-230":{
+          "ano": 2023,
+          "nome": "TT-R 230",
+          "foto": "./assets/imgs/Motos/TT-R-230-2023/tt-r230(Hero).png",
+          "preço": "7000",
+          "link": "/pages/motos/tt-r230.html"
+        }
+
+        
+
+        
+        
+      },
+
+      "Vans": {
+        "biz": {
+          "ano": 2019,
+          "nome": "Biz",
+          "foto": "url-para-a-foto",
+          "preço": "4444.00",
+          "link": "/pages/biz.html"
+        },
+        "MV Agusta Rush 1000": {
+          "ano": 2019,
+          "nome": "Agusta Rush 1000",
+          "foto": "../foto.jpg",
+          "preço": "7000",
+          "link": "/pages/jeep-renegade.html"
+        }
+      },
+
+      "Caminhões": {
+        "biz": {
+          "ano": 2019,
+          "nome": "Biz",
+          "foto": "url-para-a-foto",
+          "preço": "4444.00",
+          "link": "/pages/biz.html"
+        },
+        "MV Agusta Rush 1000": {
+          "ano": 2019,
+          "nome": "Agusta Rush 1000",
+          "foto": "../foto.jpg",
+          "preço": "7000",
+          "link": "/pages/jeep-renegade.html"
+        }
+      }
+
+      
+    };
+
+    function GeraCadsVeiculosMock(elementoId, tipoAutomovel) {   
+      const pai = document.getElementById(elementoId); 
+
+      
+      if(largura <= 425){
+          numeroDeCards = 1;
+          
+      }else if(largura <= 768){
+          numeroDeCards = 3;
+      }else if(largura <= 1024){
+          numeroDeCards = 4;
+      }else{
+          var numeroDeCards = 5;
+      }
+    
+      for (let i = 0; i < numeroDeCards; i++) {
+          const card = document.createElement('div');
+              card.classList.add('bg-[#324256]', 'w-48', 'h-64', 'rounded-xl', 'mx-4', 'justify-center');
+
+        card.innerHTML = `
                     <span class="">
-                        <img src="${caminhoImagem}" class="relative -mt-8 mb-4 rounded-xl" alt="aa">
+                        <img src="./assets/imgs/automoveis-cards/${tipoAutomovel}/card-${tipoAutomovel}${i < 10 ? '0' + i : i}.png" class="relative -mt-8 mb-4 rounded-xl" alt="É um(a) ${tipoAutomovel}">
                     </span>
                     <div class="desc-carros text-center text-white py-2">
                         <p class="py-1 px-2 font-normal">
@@ -264,17 +752,22 @@
                         <button class="bg-[#4ABBAE] h-7 w-36 mt-3 text-[#324256] font-bold px-6 rounded-full hover:bg-[#4ABBFF] hover:shadow-2xl">
                             Reservar
                         </button>
-                    </div>
-                `;
+                    </div>`;
 
-                pai.appendChild(card);
-            }
-        }
+      pai.appendChild(card);
+    }
+  }
+    
+  
+    
+  
+        GeraCadsVeiculos('listaCarros-horizontal', 'Carros', dadosJSON);
+        GeraCadsVeiculos('listaMotos-horizontal', 'Motos', dadosJSON);
+        //GeraCadsVeiculos('listaVans-horizontal', 'Vans', dadosJSON);
+        //GeraCadsVeiculos('listaCaminhoes-horizontal', 'Caminhões', dadosJSON);
 
-        GeraCadsVeiculos('listaCarros-horizontal', './assets/imgs/carro-card.png');
-        GeraCadsVeiculos('listaMotos-horizontal', './assets/imgs/moto-card.png');
-        GeraCadsVeiculos('listaVans-horizontal', './assets/imgs/van-card.png');
-        GeraCadsVeiculos('listaCaminhoes-horizontal', './assets/imgs/caminhao-card.png');
+        //GeraCadsVeiculosMock('listaVans-horizontal', 'van');
+        //GeraCadsVeiculosMock('listaCaminhoes-horizontal', 'caminhao');
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
