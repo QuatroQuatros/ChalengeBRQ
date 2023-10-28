@@ -46,8 +46,8 @@ public class main {
 		economiaUsuarioDAO = new EconomiaUsuarioDAOImpl();
 		
 		
-//		Usuario usuario = new Usuario("Larissa Manoela", "LarissaManoela@gmail.com", "cirilo", "09/12/2002", "/imagens/foto.jpg", "45785468121");		
-//		userDao.inserirUsuario(usuario);
+		Usuario usuario = new Usuario("Larissa Manoela", "LarissaManoela@gmail.com", "cirilo", "09/12/2002", "/imagens/foto.jpg", "45785468121");		
+		userDao.inserirUsuario(usuario);
 		
 		//Usuario user = userDao.buscarUsuarioPorId(21);
 		//System.out.println(user);
