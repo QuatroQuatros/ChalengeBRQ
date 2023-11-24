@@ -78,7 +78,7 @@ CREATE TABLE metas (
     id NUMBER(10) PRIMARY KEY,
     id_usuario NUMBER(10) NOT NULL,
     descricao VARCHAR2(100),
-    valor_inical NUMBER(10, 2) NOT NULL, 
+    valor_inicial NUMBER(10, 2) NOT NULL, 
     valor_atual NUMBER(10, 2) NOT NULL, 
     valor_meta NUMBER(10, 2) NOT NULL,
     aporte NUMBER(10, 2) NOT NULL,
