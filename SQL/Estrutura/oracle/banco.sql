@@ -79,6 +79,7 @@ CREATE TABLE metas (
     id_usuario NUMBER(10) NOT NULL,
     descricao VARCHAR2(100),
     valor NUMBER(10, 2) NOT NULL,
+    icon VARCHAR2(300),
     data_conclusao_estimada DATE NOT NULL,
     data_conclusao DATE,
     status NUMBER(1) DEFAULT 0,
